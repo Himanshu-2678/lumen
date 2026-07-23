@@ -8,6 +8,7 @@ class Settings(BaseSettings):
     DEBUG: bool = False
     DATABASE_URL: str 
     UPLOAD_DIR: str 
+    CHROMA_PATH: str
 
     model_config = SettingsConfigDict(
         env_file=".env",
