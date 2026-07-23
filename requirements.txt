@@ -9,3 +9,11 @@ httpx
 
 sqlalchemy
 psycopg[binary]
+
+python-multipart
+
+pymupdf
+langchain-text-splitters
+sentence-transformers
+
+chromadb
