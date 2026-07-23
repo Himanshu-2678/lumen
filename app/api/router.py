@@ -2,6 +2,7 @@ from fastapi import APIRouter
 
 from app.api.health import router as health_router
 from app.api.document import router as document_router
+from app.api.upload import router as upload_router
 
 router = APIRouter()
 
@@ -13,4 +14,9 @@ router.include_router(
 router.include_router(
     document_router,
     tags=["Documents"]
+)
+
+router.include_router(
+    upload_router,
+    tags=["Upload"]
 )
