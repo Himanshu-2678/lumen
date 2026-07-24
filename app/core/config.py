@@ -9,7 +9,9 @@ class Settings(BaseSettings):
     DATABASE_URL: str 
     UPLOAD_DIR: str 
     CHROMA_PATH: str
-
+    GROQ_API_KEY: str
+    GROQ_MODEL: str
+    
     model_config = SettingsConfigDict(
         env_file=".env",
         extra="ignore"
