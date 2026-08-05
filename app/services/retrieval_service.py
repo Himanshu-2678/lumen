@@ -1,19 +1,50 @@
 from app.services.embedding_service import model
 from app.vectorstore.chroma_client import collection
+from app.services.reranker_service import rerank_chunks
 
-
-def retrieve_chunks(query: str, top_k: int = 5):
-    query_embedding = model.encode(
+def generate_query_embedding(query: str):
+    return model.encode(
         query,
         normalize_embeddings=True,
     ).tolist()
 
-    results = collection.query(
+
+def vector_search(query_embedding, top_k: int = 20, document_id: int | None = None, filename: str | None = None,):
+
+    where = None
+
+    if document_id is not None:
+        where = {
+            "document_id": document_id
+        }
+
+    elif filename is not None:
+        where = {
+            "filename": filename
+        }
+
+    return collection.query(
         query_embeddings=[query_embedding],
         n_results=top_k,
+        where=where,
     )
 
-    return [
+def retrieve_chunks(
+    query: str,
+    top_k: int = 20,
+    document_id: int | None = None,
+    filename: str | None = None,
+):
+    query_embedding = generate_query_embedding(query)
+
+    results = vector_search(
+        query_embedding=query_embedding,
+        top_k=top_k,
+        document_id=document_id,
+        filename=filename,
+    )
+
+    retrieved_chunks = [
         {
             "id": chunk_id,
             "text": text,
@@ -27,3 +58,5 @@ def retrieve_chunks(query: str, top_k: int = 5):
             results["distances"][0],
         )
     ]
+
+    return retrieved_chunks
