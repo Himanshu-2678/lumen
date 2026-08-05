@@ -18,6 +18,7 @@ def upload_document(
     )
 
     ingest_document(
+        db=db,
         document_id=document.id,
         filename=document.filename,
         file_path=document.file_path,
