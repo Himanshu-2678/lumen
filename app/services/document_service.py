@@ -53,6 +53,6 @@ def delete_document(db: Session, document_id: int):
 
         return document
 
-        except Exception as e:
-            db.rollback()
-            raise e
+    except Exception as e:
+        db.rollback()
+        raise e
