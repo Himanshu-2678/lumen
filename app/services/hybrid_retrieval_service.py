@@ -34,10 +34,15 @@ def hybrid_search(
     merged = {}
 
     for chunk in vector_results:
+        chunk["retrieval_method"] = ["vector"]
         merged[chunk["id"]] = chunk
 
     for chunk in bm25_results:
-        if chunk["id"] not in merged:
+
+        if chunk["id"] in merged:
+            merged[chunk["id"]]["retrieval_method"].append("bm25")
+        else:
+            chunk["retrieval_method"] = ["bm25"]
             merged[chunk["id"]] = chunk
 
     merged_chunks = list(merged.values())
