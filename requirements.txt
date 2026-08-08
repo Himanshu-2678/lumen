@@ -19,3 +19,4 @@ sentence-transformers
 chromadb
 
 rank-bm25
+alembic
