@@ -1,0 +1,14 @@
+[
+  {
+    "question": "What are dependencies in FastAPI?",
+    "expected_document": "Building Python Web Apis With Fastapi PDF.pdf"
+  },
+  {
+    "question": "What are Python decorators?",
+    "expected_document": "python-docs-readthedocs-io-en-latest.pdf"
+  },
+  {
+    "question": "What is an index in PostgreSQL?",
+    "expected_document": "postgres-notes-readthedocs-io-en-latest.pdf"
+  }
+]
