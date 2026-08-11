@@ -7,16 +7,20 @@ text_splitter = RecursiveCharacterTextSplitter(
 )
 
 def chunk_pages(pages: list[dict]) -> list[dict]:
+
     chunks = []
+    global_index = 0
 
     for page in pages:
         page_chunks = text_splitter.split_text(page["text"])
 
-        for index, chunk in enumerate(page_chunks):
+        for chunk in page_chunks:
             chunks.append({
                 "page_number": page["page_number"],
-                "chunk_index": index,
+                "chunk_index": global_index,
                 "text": chunk
             })
+
+            global_index += 1
 
     return chunks
