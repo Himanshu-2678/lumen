@@ -25,7 +25,7 @@ def ingest_document(
     5. Generate embeddings
     6. Store vectors in ChromaDB
     """
-
+    
     # Parse PDF
     pages = extract_text_from_pdf(file_path)
 
@@ -50,3 +50,5 @@ def ingest_document(
 
     # Store vectors in ChromaDB
     add_chunks_to_vector_store(chunks)
+
+    return len(chunks)
