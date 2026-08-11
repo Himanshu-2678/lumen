@@ -19,10 +19,10 @@ def calculate_confidence(reranked_chunks: list[dict]):
     # Reranker quality
     top_score = top_chunk.get("reranker_score", -999)
 
-    if top_score < -5:
+    if top_score < 0:
         reranker_quality_score = 0.0
     else:
-        reranker_quality_score = 1.0
+        reranker_quality_score = min(top_score / 10, 1)
 
     # Relative reranker strength
     if len(reranked_chunks) == 1:
@@ -40,14 +40,18 @@ def calculate_confidence(reranked_chunks: list[dict]):
     evidence_score = min(len(reranked_chunks) / 5, 1)
 
     confidence_score = (
-        0.35 * agreement_score
-        + 0.35 * reranker_strength
-        + 0.30 * evidence_score
+        0.2 * agreement_score
+        + 0.6 * reranker_strength
+        + 0.2 * evidence_score
     )
 
-    if confidence_score >= 0.75:
+    top_reranker_score = top_chunk.get("reranker_score")
+
+    if top_reranker_score is not None and top_reranker_score < 0:
+        level = "low"
+    elif confidence_score >= 0.75:
         level = "high"
-    elif confidence_score >= 0.45:
+    elif confidence_score >= 0.45:  
         level = "medium"
     else:
         level = "low"
