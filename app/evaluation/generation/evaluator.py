@@ -1,17 +1,11 @@
 import json
 
 from app.services.hybrid_retrieval_service import hybrid_search
-from app.services.context_service import build_context
 from app.services.llm_service import generate_answer
-from app.evaluation.generation.metrics import (
-    answer_relevance,
-    citation_accuracy,
-    faithfulness,
-)
 
 
 def load_test_cases():
-    with open("app/evaluation/generation/test_case.json", "r", encoding="utf-8") as file:
+    with open("app/evaluation/dataset.json", "r", encoding="utf-8") as file:
         return json.load(file)
 
 
@@ -19,27 +13,45 @@ def evaluate_generation():
     test_cases = load_test_cases()
     results = []
 
-    for case in test_cases:
-        print("\nQuestion:")
-        print(case["question"])
-
+    for index, case in enumerate(test_cases, start=1):
         chunks = hybrid_search(query=case["question"])
-        context = build_context(chunks)
-        response = generate_answer(question=case["question"], context=context)
+        response = generate_answer(
+            question=case["question"],
+            retrieved_chunks=chunks
+        )
 
-        relevance = answer_relevance(response.answer, case["expected_keywords"])
-        citation_score = citation_accuracy(response.citations, case["expected_sources"])
-        faithfulness_score = faithfulness(response.answer, context)
+        retrieved_documents = list({
+            chunk["metadata"]["filename"]
+            for chunk in chunks
+        })
 
         result = {
+            "id": index,
             "question": case["question"],
-            "answer_relevance": relevance,
-            "citation_accuracy": citation_score,
-            "faithfulness": faithfulness_score,
+            "expected_document": case["expected_document"],
+            "retrieved_documents": retrieved_documents,
+            "answer": response.answer,
+            "citations": response.citations
         }
 
         results.append(result)
-        print(result)
+
+        print(
+            f"[{index}/{len(test_cases)}] "
+            f"{case['question']}"
+        )
+        print(
+            f"  Expected: {case['expected_document']}"
+        )
+        print(
+            f"  Retrieved: {retrieved_documents}"
+        )
+        print(
+            f"  Answer: {response.answer}"
+        )
+        print(
+            f"  Citations: {response.citations}"
+        )
 
     return results
 
