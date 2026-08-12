@@ -1,20 +1,167 @@
 [
-    {
-        "question": "What authorization is being given?",
-        "expected_chunks": [
-            "document_5_chunk_0"
-        ]
-    },
-    {
-        "question": "Who is authorized to verify the information?",
-        "expected_chunks": [
-            "document_5_chunk_0"
-        ]
-    },
-    {
-        "question": "What does the background verification include?",
-        "expected_chunks": [
-            "document_5_chunk_0"
-        ]
-    }
+  {
+    "question": "What are dependencies in FastAPI?",
+    "expected_document": "Building Python Web Apis With Fastapi PDF.pdf"
+  },
+  {
+    "question": "How does dependency injection work in FastAPI?",
+    "expected_document": "Building Python Web Apis With Fastapi PDF.pdf"
+  },
+  {
+    "question": "What authentication methods does FastAPI support?",
+    "expected_document": "Building Python Web Apis With Fastapi PDF.pdf"
+  },
+  {
+    "question": "How are JWT tokens used in FastAPI authentication?",
+    "expected_document": "Building Python Web Apis With Fastapi PDF.pdf"
+  },
+  {
+    "question": "Why is securing a FastAPI application important?",
+    "expected_document": "Building Python Web Apis With Fastapi PDF.pdf"
+  },
+  {
+    "question": "What are the key differences between authentication and authorization?",
+    "expected_document": "Building Python Web Apis With Fastapi PDF.pdf"
+  },
+  {
+    "question": "What authentication methods does FastAPI support and what is a common use case for bearer token authentication?",
+    "expected_document": "Building Python Web Apis With Fastapi PDF.pdf"
+  },
+
+  {
+    "question": "What are Python decorators?",
+    "expected_document": "python-docs-readthedocs-io-en-latest.pdf"
+  },
+  {
+    "question": "How does the @decorator syntax work in Python?",
+    "expected_document": "python-docs-readthedocs-io-en-latest.pdf"
+  },
+  {
+    "question": "What are pure functions in Python?",
+    "expected_document": "python-docs-readthedocs-io-en-latest.pdf"
+  },
+  {
+    "question": "Why are pure functions easier to test?",
+    "expected_document": "python-docs-readthedocs-io-en-latest.pdf"
+  },
+  {
+    "question": "What is memoization and how can decorators be used for it?",
+    "expected_document": "python-docs-readthedocs-io-en-latest.pdf"
+  },
+  {
+    "question": "How can decorators help separate concerns in Python?",
+    "expected_document": "python-docs-readthedocs-io-en-latest.pdf"
+  },
+  {
+    "question": "Why is the @decorator syntax preferred over manually decorating a function?",
+    "expected_document": "python-docs-readthedocs-io-en-latest.pdf"
+  },
+
+  {
+    "question": "What is an index in PostgreSQL?",
+    "expected_document": "postgres-notes-readthedocs-io-en-latest.pdf"
+  },
+  {
+    "question": "Why are indexes useful in PostgreSQL?",
+    "expected_document": "postgres-notes-readthedocs-io-en-latest.pdf"
+  },
+  {
+    "question": "What are PostgreSQL system columns?",
+    "expected_document": "postgres-notes-readthedocs-io-en-latest.pdf"
+  },
+  {
+    "question": "What is the purpose of the tableoid system column in PostgreSQL?",
+    "expected_document": "postgres-notes-readthedocs-io-en-latest.pdf"
+  },
+  {
+    "question": "What happens when an exclusion constraint is added in PostgreSQL?",
+    "expected_document": "postgres-notes-readthedocs-io-en-latest.pdf"
+  },
+  {
+    "question": "How can indexes improve foreign key referential actions in PostgreSQL?",
+    "expected_document": "postgres-notes-readthedocs-io-en-latest.pdf"
+  },
+  {
+    "question": "How can tableoid be used with the oid column of pg_class?",
+    "expected_document": "postgres-notes-readthedocs-io-en-latest.pdf"
+  },
+
+  {
+    "question": "What is Docker?",
+    "expected_document": "TheDockerBook_sample.pdf"
+  },
+  {
+    "question": "What is a Docker container?",
+    "expected_document": "TheDockerBook_sample.pdf"
+  },
+  {
+    "question": "What is a Docker image?",
+    "expected_document": "TheDockerBook_sample.pdf"
+  },
+  {
+    "question": "What is the difference between a Docker image and a container?",
+    "expected_document": "TheDockerBook_sample.pdf"
+  },
+  {
+    "question": "What is a Dockerfile used for?",
+    "expected_document": "TheDockerBook_sample.pdf"
+  },
+  {
+    "question": "What is the purpose of the docker build command?",
+    "expected_document": "TheDockerBook_sample.pdf"
+  },
+  {
+    "question": "What is the purpose of the docker run command?",
+    "expected_document": "TheDockerBook_sample.pdf"
+  },
+
+  {
+    "question": "What is a variable in C++?",
+    "expected_document": "cpp_tutorial.pdf"
+  },
+  {
+    "question": "What is the difference between a pointer and a reference in C++?",
+    "expected_document": "cpp_tutorial.pdf"
+  },
+  {
+    "question": "What is a class in C++?",
+    "expected_document": "cpp_tutorial.pdf"
+  },
+  {
+    "question": "What is an object in C++?",
+    "expected_document": "cpp_tutorial.pdf"
+  },
+  {
+    "question": "What is inheritance in C++?",
+    "expected_document": "cpp_tutorial.pdf"
+  },
+  {
+    "question": "What is polymorphism in C++?",
+    "expected_document": "cpp_tutorial.pdf"
+  },
+  {
+    "question": "What is a constructor in C++?",
+    "expected_document": "cpp_tutorial.pdf"
+  },
+
+  {
+    "question": "What is the monthly salary of the author of the Python documentation?",
+    "expected_document": null
+  },
+  {
+    "question": "What is the bank account number of the author of the PostgreSQL notes?",
+    "expected_document": null
+  },
+  {
+    "question": "What is the personal phone number of the FastAPI developer mentioned in the document?",
+    "expected_document": null
+  },
+  {
+    "question": "What is the Docker tutorial author's annual salary?",
+    "expected_document": null
+  },
+  {
+    "question": "What is the C++ tutorial author's home address?",
+    "expected_document": null
+  }
 ]
