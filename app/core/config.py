@@ -11,6 +11,7 @@ class Settings(BaseSettings):
     CHROMA_PATH: str
     GROQ_API_KEY: str
     GROQ_MODEL: str
+    GROQ_EVAL_MODEL: str
     HF_TOKEN: str
     
     model_config = SettingsConfigDict(
