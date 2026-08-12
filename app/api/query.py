@@ -3,7 +3,7 @@ from pydantic import BaseModel
 
 from app.services.hybrid_retrieval_service import hybrid_search
 from app.services.confidence_service import calculate_confidence
-from app.services.context_service import build_context
+#from app.services.context_service import build_context
 from app.services.llm_service import generate_answer
 from app.schemas.query import QueryResponse
 from app.services.citation_service import build_citations
@@ -30,9 +30,9 @@ def query_documents(request: QueryRequest):
             "sources": []
         }
 
-    context = build_context(retrieved_chunks)
+    #context = build_context(retrieved_chunks)
 
-    llm_response = generate_answer(question=request.question, context=context)
+    llm_response = generate_answer(question=request.question, retrieved_chunks=retrieved_chunks)
 
     answer = llm_response.answer
     citation_ids = set(llm_response.citations)
