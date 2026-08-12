@@ -25,7 +25,8 @@ def calculate_confidence(reranked_chunks: list[dict]):
         reranker_quality_score = min(top_score / 10, 1)
 
     # Relative reranker strength
-    if len(reranked_chunks) == 1:
+    reranker_strength = reranker_quality_score
+    """if len(reranked_chunks) == 1:
         reranker_strength = reranker_quality_score
     else:
         second_score = reranked_chunks[1].get("reranker_score", -999)
@@ -34,7 +35,7 @@ def calculate_confidence(reranked_chunks: list[dict]):
 
         reranker_strength = min(max(gap / 5, 0), 1)
 
-        reranker_strength *= reranker_quality_score
+        reranker_strength *= reranker_quality_score"""
 
     # Evidence availability
     evidence_score = min(len(reranked_chunks) / 5, 1)
