@@ -1,0 +1,162 @@
+[
+  {
+    "question": "What are dependencies in FastAPI?",
+    "context_precision": 0.9999999999
+  },
+  {
+    "question": "How does dependency injection work in FastAPI?",
+    "context_precision": 0.9999999999666667
+  },
+  {
+    "question": "What authentication methods does FastAPI support?",
+    "context_precision": 0.8874999999778125
+  },
+  {
+    "question": "How are JWT tokens used in FastAPI authentication?",
+    "context_precision": 0.999999999975
+  },
+  {
+    "question": "Why is securing a FastAPI application important?",
+    "context_precision": 0.99999999998
+  },
+  {
+    "question": "What are the key differences between authentication and authorization?",
+    "context_precision": 0.9999999999666667
+  },
+  {
+    "question": "What authentication methods does FastAPI support and what is a common use case for bearer token authentication?",
+    "context_precision": 0.8874999999778125
+  },
+  {
+    "question": "What are Python decorators?",
+    "context_precision": 0.9999999999666667
+  },
+  {
+    "question": "How does the @decorator syntax work in Python?",
+    "context_precision": 0.8874999999778125
+  },
+  {
+    "question": "What are pure functions in Python?",
+    "context_precision": 0.99999999995
+  },
+  {
+    "question": "Why are pure functions easier to test?",
+    "context_precision": 0.8874999999778125
+  },
+  {
+    "question": "What is memoization and how can decorators be used for it?",
+    "context_precision": 0.999999999975
+  },
+  {
+    "question": "How can decorators help separate concerns in Python?",
+    "context_precision": 0.8041666666465626
+  },
+  {
+    "question": "Why is the @decorator syntax preferred over manually decorating a function?",
+    "context_precision": 0.9999999999666667
+  },
+  {
+    "question": "What is an index in PostgreSQL?",
+    "context_precision": 0.999999999975
+  },
+  {
+    "question": "Why are indexes useful in PostgreSQL?",
+    "context_precision": 0.7499999999625
+  },
+  {
+    "question": "What are PostgreSQL system columns?",
+    "context_precision": 0.0
+  },
+  {
+    "question": "What is the purpose of the tableoid system column in PostgreSQL?",
+    "context_precision": 0.999999999975
+  },
+  {
+    "question": "What happens when an exclusion constraint is added in PostgreSQL?",
+    "context_precision": 0.99999999995
+  },
+  {
+    "question": "How can indexes improve foreign key referential actions in PostgreSQL?",
+    "context_precision": 0.99999999998
+  },
+  {
+    "question": "How can tableoid be used with the oid column of pg_class?",
+    "context_precision": 0.94999999997625
+  },
+  {
+    "question": "What is Docker?",
+    "context_precision": 0.8666666666377778
+  },
+  {
+    "question": "What is a Docker container?",
+    "context_precision": 0.4166666666458333
+  },
+  {
+    "question": "What is a Docker image?",
+    "context_precision": 0.8333333332916666
+  },
+  {
+    "question": "What is the difference between a Docker image and a container?",
+    "context_precision": 0.8055555555287036
+  },
+  {
+    "question": "What is a Dockerfile used for?",
+    "context_precision": 0.5333333333155555
+  },
+  {
+    "question": "What is the purpose of the docker build command?",
+    "context_precision": 0.999999999975
+  },
+  {
+    "question": "What is the purpose of the docker run command?",
+    "context_precision": 0.49999999995
+  },
+  {
+    "question": "What is a variable in C++?",
+    "context_precision": 0.99999999998
+  },
+  {
+    "question": "What is the difference between a pointer and a reference in C++?",
+    "context_precision": 0.8874999999778125
+  },
+  {
+    "question": "What is a class in C++?",
+    "context_precision": 0.999999999975
+  },
+  {
+    "question": "What is an object in C++?",
+    "context_precision": 0.7555555555303703
+  },
+  {
+    "question": "What is inheritance in C++?",
+    "context_precision": 0.6388888888675925
+  },
+  {
+    "question": "What is polymorphism in C++?",
+    "context_precision": 0.9999999999
+  },
+  {
+    "question": "What is a constructor in C++?",
+    "context_precision": 0.94999999997625
+  },
+  {
+    "question": "What is the monthly salary of the author of the Python documentation?",
+    "context_precision": 0.0
+  },
+  {
+    "question": "What is the bank account number of the author of the PostgreSQL notes?",
+    "context_precision": 0.0
+  },
+  {
+    "question": "What is the personal phone number of the FastAPI developer mentioned in the document?",
+    "context_precision": 0.0
+  },
+  {
+    "question": "What is the Docker tutorial author's annual salary?",
+    "context_precision": 0.0
+  },
+  {
+    "question": "What is the C++ tutorial author's home address?",
+    "context_precision": 0.0
+  }
+]

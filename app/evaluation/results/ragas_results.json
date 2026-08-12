@@ -1,0 +1,242 @@
+[
+  {
+    "question": "What are dependencies in FastAPI?",
+    "expected_document": "Building Python Web Apis With Fastapi PDF.pdf",
+    "faithfulness": 0.0,
+    "answer_relevancy": 0.9641192735166545
+  },
+  {
+    "question": "How does dependency injection work in FastAPI?",
+    "expected_document": "Building Python Web Apis With Fastapi PDF.pdf",
+    "faithfulness": 0.875,
+    "answer_relevancy": 0.9708896452578158
+  },
+  {
+    "question": "What authentication methods does FastAPI support?",
+    "expected_document": "Building Python Web Apis With Fastapi PDF.pdf",
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.999999999999961
+  },
+  {
+    "question": "How are JWT tokens used in FastAPI authentication?",
+    "expected_document": "Building Python Web Apis With Fastapi PDF.pdf",
+    "faithfulness": 0.3333333333333333,
+    "answer_relevancy": 0.745092618624647
+  },
+  {
+    "question": "Why is securing a FastAPI application important?",
+    "expected_document": "Building Python Web Apis With Fastapi PDF.pdf",
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.8267437476179674
+  },
+  {
+    "question": "What are the key differences between authentication and authorization?",
+    "expected_document": "Building Python Web Apis With Fastapi PDF.pdf",
+    "faithfulness": 0.75,
+    "answer_relevancy": 0.6416837015712584
+  },
+  {
+    "question": "What authentication methods does FastAPI support and what is a common use case for bearer token authentication?",
+    "expected_document": "Building Python Web Apis With Fastapi PDF.pdf",
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.932308778957478
+  },
+  {
+    "question": "What are Python decorators?",
+    "expected_document": "python-docs-readthedocs-io-en-latest.pdf",
+    "faithfulness": 0.75,
+    "answer_relevancy": 0.9207506686451857
+  },
+  {
+    "question": "How does the @decorator syntax work in Python?",
+    "expected_document": "python-docs-readthedocs-io-en-latest.pdf",
+    "faithfulness": 0.6,
+    "answer_relevancy": 0.9657524109238538
+  },
+  {
+    "question": "What are pure functions in Python?",
+    "expected_document": "python-docs-readthedocs-io-en-latest.pdf",
+    "faithfulness": 0.6666666666666666,
+    "answer_relevancy": 0.9999999999999263
+  },
+  {
+    "question": "Why are pure functions easier to test?",
+    "expected_document": "python-docs-readthedocs-io-en-latest.pdf",
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.5438649907780678
+  },
+  {
+    "question": "What is memoization and how can decorators be used for it?",
+    "expected_document": "python-docs-readthedocs-io-en-latest.pdf",
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.8378486658212817
+  },
+  {
+    "question": "How can decorators help separate concerns in Python?",
+    "expected_document": "python-docs-readthedocs-io-en-latest.pdf",
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.9999999999999996
+  },
+  {
+    "question": "Why is the @decorator syntax preferred over manually decorating a function?",
+    "expected_document": "python-docs-readthedocs-io-en-latest.pdf",
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.0
+  },
+  {
+    "question": "What is an index in PostgreSQL?",
+    "expected_document": "postgres-notes-readthedocs-io-en-latest.pdf",
+    "faithfulness": 0.3333333333333333,
+    "answer_relevancy": 0.9999999999998933
+  },
+  {
+    "question": "Why are indexes useful in PostgreSQL?",
+    "expected_document": "postgres-notes-readthedocs-io-en-latest.pdf",
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.7060127766397404
+  },
+  {
+    "question": "What are PostgreSQL system columns?",
+    "expected_document": "postgres-notes-readthedocs-io-en-latest.pdf",
+    "faithfulness": 0.0,
+    "answer_relevancy": 0.8148132096497575
+  },
+  {
+    "question": "What happens when an exclusion constraint is added in PostgreSQL?",
+    "expected_document": "postgres-notes-readthedocs-io-en-latest.pdf",
+    "faithfulness": 0.5,
+    "answer_relevancy": 0.9116464666750596
+  },
+  {
+    "question": "How can indexes improve foreign key referential actions in PostgreSQL?",
+    "expected_document": "postgres-notes-readthedocs-io-en-latest.pdf",
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.8573216365325572
+  },
+  {
+    "question": "How can tableoid be used with the oid column of pg_class?",
+    "expected_document": "postgres-notes-readthedocs-io-en-latest.pdf",
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.0
+  },
+  {
+    "question": "What is Docker?",
+    "expected_document": "TheDockerBook_sample.pdf",
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.9999999999999187
+  },
+  {
+    "question": "What is a Docker container?",
+    "expected_document": "TheDockerBook_sample.pdf",
+    "faithfulness": 0.5,
+    "answer_relevancy": 0.9999999999999353
+  },
+  {
+    "question": "What is a Docker image?",
+    "expected_document": "TheDockerBook_sample.pdf",
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.9368574233472153
+  },
+  {
+    "question": "What is the difference between a Docker image and a container?",
+    "expected_document": "TheDockerBook_sample.pdf",
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.8598516802867366
+  },
+  {
+    "question": "What is a Dockerfile used for?",
+    "expected_document": "TheDockerBook_sample.pdf",
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.9593345144381477
+  },
+  {
+    "question": "What is the purpose of the docker build command?",
+    "expected_document": "TheDockerBook_sample.pdf",
+    "faithfulness": 0.5,
+    "answer_relevancy": 0.8773791574733174
+  },
+  {
+    "question": "What is the purpose of the docker run command?",
+    "expected_document": "TheDockerBook_sample.pdf",
+    "faithfulness": 0.25,
+    "answer_relevancy": 0.9999999999998744
+  },
+  {
+    "question": "What is a variable in C++?",
+    "expected_document": "cpp_tutorial.pdf",
+    "faithfulness": 0.5,
+    "answer_relevancy": 0.9999999999999677
+  },
+  {
+    "question": "What is the difference between a pointer and a reference in C++?",
+    "expected_document": "cpp_tutorial.pdf",
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.9742737266313162
+  },
+  {
+    "question": "What is a class in C++?",
+    "expected_document": "cpp_tutorial.pdf",
+    "faithfulness": 0.6666666666666666,
+    "answer_relevancy": 0.8911442876911985
+  },
+  {
+    "question": "What is an object in C++?",
+    "expected_document": "cpp_tutorial.pdf",
+    "faithfulness": 0.6666666666666666,
+    "answer_relevancy": 0.8705216649747919
+  },
+  {
+    "question": "What is inheritance in C++?",
+    "expected_document": "cpp_tutorial.pdf",
+    "faithfulness": 0.5,
+    "answer_relevancy": 0.9147457699908624
+  },
+  {
+    "question": "What is polymorphism in C++?",
+    "expected_document": "cpp_tutorial.pdf",
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.7076264196310268
+  },
+  {
+    "question": "What is a constructor in C++?",
+    "expected_document": "cpp_tutorial.pdf",
+    "faithfulness": 0.3333333333333333,
+    "answer_relevancy": 0.9999999999999997
+  },
+  {
+    "question": "What is the monthly salary of the author of the Python documentation?",
+    "expected_document": null,
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.0
+  },
+  {
+    "question": "What is the bank account number of the author of the PostgreSQL notes?",
+    "expected_document": null,
+    "faithfulness": 0.0,
+    "answer_relevancy": 0.0
+  },
+  {
+    "question": "What is the personal phone number of the FastAPI developer mentioned in the document?",
+    "expected_document": null,
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.0
+  },
+  {
+    "question": "What is the Docker tutorial author's annual salary?",
+    "expected_document": null,
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.0
+  },
+  {
+    "question": "What is the C++ tutorial author's home address?",
+    "expected_document": null,
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.0
+  },
+  {
+    "question": "What is the purpose of the tableoid system column in PostgreSQL?",
+    "expected_document": "postgres-notes-readthedocs-io-en-latest.pdf",
+    "faithfulness": 0.6666666666666666,
+    "answer_relevancy": 0.7561050708718903
+  }
+]

@@ -1,0 +1,27 @@
+{
+  "dataset": {
+    "total_questions": 40,
+    "answerable_questions": 35,
+    "unanswerable_questions": 5
+  },
+  "baseline": {
+    "faithfulness": 0.624,
+    "answer_relevancy": 0.795,
+    "context_precision": 0.756
+  },
+  "reranked": {
+    "faithfulness": 0.735,
+    "answer_relevancy": 0.735,
+    "context_precision": 0.762
+  },
+  "improvement": {
+    "faithfulness": 0.111,
+    "answer_relevancy": -0.06,
+    "context_precision": 0.006
+  },
+  "refusal_accuracy": 1.0,
+  "decision": {
+    "reranking_improved_faithfulness": true,
+    "selected_strategy": "hybrid retrieval + cross encoder reranking"
+  }
+}

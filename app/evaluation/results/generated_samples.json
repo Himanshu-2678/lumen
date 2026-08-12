@@ -1,0 +1,863 @@
+[
+  {
+    "question": "What are dependencies in FastAPI?",
+    "expected_document": "Building Python Web Apis With Fastapi PDF.pdf",
+    "answer": "Dependencies in FastAPI are defined as functions or classes.",
+    "citations": [
+      "document_9_chunk_81"
+    ],
+    "retrieved_contexts": [
+      "- A MongoDB database is required, with code available on\nGitHub for reference.\nAuthentication Methods in FastAPI\nFastAPI supports several authentication methods:\n1. \nBasic HTTP Authentication\n: Credentials are sent with an Authorization header.\n2. \nCookies\n: Used to store user data on the client side.\n3. \nBearer Token Authentication\n: Involves using security tokens (like JWT) for authorization.\nIn this chapter, we will primarily utilize bearer token\nauthentication.\nDependency Injection in FastAPI\n- Dependency Injection allows the separation of concerns by\ninjecting functions that provide parameters needed during\nrequest handling.\n- Dependencies in FastAPI are defined as functions or classes",
+      "specific use cases and pros and cons.\n4.Question\nWhat is dependency injection and how is it used in\nFastAPI?\nAnswer:Dependency injection in FastAPI is a design pattern\nwhere functions receive instances they need to operate. It\nallows for cleaner code by injecting dependencies at runtime,\nmaking it easier to manage dependencies and reduce code\nrepetition, especially for authentication and authorization.\n5.Question\nHow does JWT enhance the security of a FastAPI\napplication?\nAnswer:JWT enhances security by ensuring that tokens are\nsigned with a secret key known only to the sender and\nreceiver, preventing tampering. The token's payload can\ninclude user information and an expiry time, which improves\nsession handling and access control.\n6.Question\nWhat steps were taken to hash user passwords in the\nFastAPI application?",
+      "Chapter 7 | Securing FastAPI Applications| Quiz\nand Test\n1.Authenticating a user means verifying their\ncredentials.\n2.FastAPI does not support bearer token authentication as a\nmethod of securing an application.\n3.Dependency Injection is a method used in FastAPI to\nseparate concerns and manage dependencies during request\nhandling.\nChapter 8 | Testing FastAPI Applications| Quiz and\nTest\n1.Unit testing is unnecessary for FastAPI\napplications.\n2.Fixtures in pytest can return necessary data for tests and\nsimplify test setup.\n3.HTTPX is used for testing synchronous APIs in FastAPI\napplications.\nChapter 9 | Deploying FastAPI Applications| Quiz\nand Test\n1.Before deploying a FastAPI application, the"
+    ],
+    "retrieved_source_ids": [
+      "document_9_chunk_36",
+      "document_9_chunk_81",
+      "document_9_chunk_96"
+    ],
+    "retrieved_documents": [
+      "Building Python Web Apis With Fastapi PDF.pdf"
+    ]
+  },
+  {
+    "question": "How does dependency injection work in FastAPI?",
+    "expected_document": "Building Python Web Apis With Fastapi PDF.pdf",
+    "answer": "Dependency injection in FastAPI is a design pattern where functions receive instances they need to operate. It allows for cleaner code by injecting dependencies at runtime, making it easier to manage dependencies and reduce code repetition, especially for authentication and authorization.",
+    "citations": [
+      "document_9_chunk_81",
+      "document_9_chunk_0"
+    ],
+    "retrieved_contexts": [
+      "specific use cases and pros and cons.\n4.Question\nWhat is dependency injection and how is it used in\nFastAPI?\nAnswer:Dependency injection in FastAPI is a design pattern\nwhere functions receive instances they need to operate. It\nallows for cleaner code by injecting dependencies at runtime,\nmaking it easier to manage dependencies and reduce code\nrepetition, especially for authentication and authorization.\n5.Question\nHow does JWT enhance the security of a FastAPI\napplication?\nAnswer:JWT enhances security by ensuring that tokens are\nsigned with a secret key known only to the sender and\nreceiver, preventing tampering. The token's payload can\ninclude user information and an expiry time, which improves\nsession handling and access control.\n6.Question\nWhat steps were taken to hash user passwords in the\nFastAPI application?",
+      "specific use cases and pros and cons.\n4.Question\nWhat is dependency injection and how is it used in\nFastAPI?\nAnswer:Dependency injection in FastAPI is a design pattern\nwhere functions receive instances they need to operate. It\nallows for cleaner code by injecting dependencies at runtime,\nmaking it easier to manage dependencies and reduce code\nrepetition, especially for authentication and authorization.\n5.Question\nHow does JWT enhance the security of a FastAPI\napplication?\nAnswer:JWT enhances security by ensuring that tokens are\nsigned with a secret key known only to the sender and\nreceiver, preventing tampering. The token's payload can\ninclude user information and an expiry time, which improves\nsession handling and access control.\n6.Question\nWhat steps were taken to hash user passwords in the\nFastAPI application?",
+      "Chapter 7 | Securing FastAPI Applications| Quiz\nand Test\n1.Authenticating a user means verifying their\ncredentials.\n2.FastAPI does not support bearer token authentication as a\nmethod of securing an application.\n3.Dependency Injection is a method used in FastAPI to\nseparate concerns and manage dependencies during request\nhandling.\nChapter 8 | Testing FastAPI Applications| Quiz and\nTest\n1.Unit testing is unnecessary for FastAPI\napplications.\n2.Fixtures in pytest can return necessary data for tests and\nsimplify test setup.\n3.HTTPX is used for testing synchronous APIs in FastAPI\napplications.\nChapter 9 | Deploying FastAPI Applications| Quiz\nand Test\n1.Before deploying a FastAPI application, the"
+    ],
+    "retrieved_source_ids": [
+      "document_9_chunk_81",
+      "document_9_chunk_0",
+      "document_9_chunk_96"
+    ],
+    "retrieved_documents": [
+      "Building Python Web Apis With Fastapi PDF.pdf"
+    ]
+  },
+  {
+    "question": "What authentication methods does FastAPI support?",
+    "expected_document": "Building Python Web Apis With Fastapi PDF.pdf",
+    "answer": "FastAPI supports basic HTTP authentication, cookies, and bearer token authentication with a common use case being JWT (JSON Web Token).",
+    "citations": [
+      "document_9_chunk_80"
+    ],
+    "retrieved_contexts": [
+      "- A MongoDB database is required, with code available on\nGitHub for reference.\nAuthentication Methods in FastAPI\nFastAPI supports several authentication methods:\n1. \nBasic HTTP Authentication\n: Credentials are sent with an Authorization header.\n2. \nCookies\n: Used to store user data on the client side.\n3. \nBearer Token Authentication\n: Involves using security tokens (like JWT) for authorization.\nIn this chapter, we will primarily utilize bearer token\nauthentication.\nDependency Injection in FastAPI\n- Dependency Injection allows the separation of concerns by\ninjecting functions that provide parameters needed during\nrequest handling.\n- Dependencies in FastAPI are defined as functions or classes",
+      "Chapter 7 | Securing FastAPI Applications| Q&A\n1.Question\nWhy is securing an application important?\nAnswer:Securing an application is crucial to restrict\naccess to its functionalities from unauthorized\nentities, thereby preventing potential hacks or illegal\nmodifications. It ensures that sensitive data and\nprocesses are protected from misuse.\n2.Question\nWhat are the key differences between authentication and\nauthorization?\nAnswer:Authentication is the process of verifying an entity's\ncredentials (such as a username and password), while\nauthorization refers to giving that entity permission to\nperform specific actions once their identity is confirmed.\n3.Question\nWhat authentication methods does FastAPI support?\nAnswer:FastAPI supports basic HTTP authentication,\ncookies, and bearer token authentication with a common use\ncase being JWT (JSON Web Token). Each method has",
+      "Chapter 7 | Securing FastAPI Applications| Quiz\nand Test\n1.Authenticating a user means verifying their\ncredentials.\n2.FastAPI does not support bearer token authentication as a\nmethod of securing an application.\n3.Dependency Injection is a method used in FastAPI to\nseparate concerns and manage dependencies during request\nhandling.\nChapter 8 | Testing FastAPI Applications| Quiz and\nTest\n1.Unit testing is unnecessary for FastAPI\napplications.\n2.Fixtures in pytest can return necessary data for tests and\nsimplify test setup.\n3.HTTPX is used for testing synchronous APIs in FastAPI\napplications.\nChapter 9 | Deploying FastAPI Applications| Quiz\nand Test\n1.Before deploying a FastAPI application, the"
+    ],
+    "retrieved_source_ids": [
+      "document_9_chunk_36",
+      "document_9_chunk_80",
+      "document_9_chunk_96"
+    ],
+    "retrieved_documents": [
+      "Building Python Web Apis With Fastapi PDF.pdf"
+    ]
+  },
+  {
+    "question": "How are JWT tokens used in FastAPI authentication?",
+    "expected_document": "Building Python Web Apis With Fastapi PDF.pdf",
+    "answer": "JWT tokens are used to restrict access to certain functionalities in FastAPI by verifying user credentials and determining permissions for actions.",
+    "citations": [
+      "document_9_chunk_35",
+      "document_9_chunk_81"
+    ],
+    "retrieved_contexts": [
+      "specific use cases and pros and cons.\n4.Question\nWhat is dependency injection and how is it used in\nFastAPI?\nAnswer:Dependency injection in FastAPI is a design pattern\nwhere functions receive instances they need to operate. It\nallows for cleaner code by injecting dependencies at runtime,\nmaking it easier to manage dependencies and reduce code\nrepetition, especially for authentication and authorization.\n5.Question\nHow does JWT enhance the security of a FastAPI\napplication?\nAnswer:JWT enhances security by ensuring that tokens are\nsigned with a secret key known only to the sender and\nreceiver, preventing tampering. The token's payload can\ninclude user information and an expiry time, which improves\nsession handling and access control.\n6.Question\nWhat steps were taken to hash user passwords in the\nFastAPI application?",
+      "- A MongoDB database is required, with code available on\nGitHub for reference.\nAuthentication Methods in FastAPI\nFastAPI supports several authentication methods:\n1. \nBasic HTTP Authentication\n: Credentials are sent with an Authorization header.\n2. \nCookies\n: Used to store user data on the client side.\n3. \nBearer Token Authentication\n: Involves using security tokens (like JWT) for authorization.\nIn this chapter, we will primarily utilize bearer token\nauthentication.\nDependency Injection in FastAPI\n- Dependency Injection allows the separation of concerns by\ninjecting functions that provide parameters needed during\nrequest handling.\n- Dependencies in FastAPI are defined as functions or classes",
+      "Chapter 7 Summary : Securing FastAPI\nApplications\nChapter 7: Securing FastAPI Applications\nIn this chapter, we focus on adding security to the FastAPI\napplication using JSON Web Token (JWT) to restrict access\nto certain functionalities to authenticated users only. The aim\nis to prevent unauthorized access and ensure that sensitive\nactions, such as adding events, are protected.\nAuthentication and Authorization Basics\n- Authentication verifies user credentials, while authorization\ndetermines permissions for actions.\n- The chapter covers the following key topics:\n  - Authentication methods in FastAPI.\n  - Securing the application with OAuth2 and JWT.\n  - Protecting routes using dependency injection.\nTechnical Requirements"
+    ],
+    "retrieved_source_ids": [
+      "document_9_chunk_81",
+      "document_9_chunk_36",
+      "document_9_chunk_35"
+    ],
+    "retrieved_documents": [
+      "Building Python Web Apis With Fastapi PDF.pdf"
+    ]
+  },
+  {
+    "question": "Why is securing a FastAPI application important?",
+    "expected_document": "Building Python Web Apis With Fastapi PDF.pdf",
+    "answer": "Securing an application is crucial to restrict access to its functionalities from unauthorized entities, thereby preventing potential hacks or illegal modifications. It ensures that sensitive data and processes are protected from misuse.",
+    "citations": [
+      "document_9_chunk_80",
+      "document_9_chunk_0"
+    ],
+    "retrieved_contexts": [
+      "Chapter 7 | Securing FastAPI Applications| Q&A\n1.Question\nWhy is securing an application important?\nAnswer:Securing an application is crucial to restrict\naccess to its functionalities from unauthorized\nentities, thereby preventing potential hacks or illegal\nmodifications. It ensures that sensitive data and\nprocesses are protected from misuse.\n2.Question\nWhat are the key differences between authentication and\nauthorization?\nAnswer:Authentication is the process of verifying an entity's\ncredentials (such as a username and password), while\nauthorization refers to giving that entity permission to\nperform specific actions once their identity is confirmed.\n3.Question\nWhat authentication methods does FastAPI support?\nAnswer:FastAPI supports basic HTTP authentication,\ncookies, and bearer token authentication with a common use\ncase being JWT (JSON Web Token). Each method has",
+      "Chapter 7 | Securing FastAPI Applications| Q&A\n1.Question\nWhy is securing an application important?\nAnswer:Securing an application is crucial to restrict\naccess to its functionalities from unauthorized\nentities, thereby preventing potential hacks or illegal\nmodifications. It ensures that sensitive data and\nprocesses are protected from misuse.\n2.Question\nWhat are the key differences between authentication and\nauthorization?\nAnswer:Authentication is the process of verifying an entity's\ncredentials (such as a username and password), while\nauthorization refers to giving that entity permission to\nperform specific actions once their identity is confirmed.\n3.Question\nWhat authentication methods does FastAPI support?\nAnswer:FastAPI supports basic HTTP authentication,\ncookies, and bearer token authentication with a common use\ncase being JWT (JSON Web Token). Each method has",
+      "protecting sensitive operations.\n9.Question\nWhat did the summary of the chapter emphasize about\nthe key concepts learned?\nAnswer:The summary emphasized the importance of\nsecuring FastAPI applications using OAuth and JWT,\nunderstanding dependency injection, protecting routes from\nunauthorized access, and configuring CORS. These skills\nserve as foundational knowledge for further development and\ntesting of FastAPI applications.\nChapter 8 | Testing FastAPI Applications| Q&A\n1.Question\nWhy is testing considered an integral part of the\napplication development cycle?\nAnswer:Testing is essential because it ensures that\nthe application functions as expected and detects\nanomalies before the application is deployed to\nproduction, which helps maintain reliability and\nuser satisfaction."
+    ],
+    "retrieved_source_ids": [
+      "document_9_chunk_80",
+      "document_9_chunk_0",
+      "document_9_chunk_83"
+    ],
+    "retrieved_documents": [
+      "Building Python Web Apis With Fastapi PDF.pdf"
+    ]
+  },
+  {
+    "question": "What are the key differences between authentication and authorization?",
+    "expected_document": "Building Python Web Apis With Fastapi PDF.pdf",
+    "answer": "Authentication is the process of verifying an entity's credentials (such as a username and password), while authorization refers to giving that entity permission to perform specific actions once their identity is confirmed.",
+    "citations": [
+      "document_9_chunk_80",
+      "document_9_chunk_0"
+    ],
+    "retrieved_contexts": [
+      "Chapter 7 | Securing FastAPI Applications| Q&A\n1.Question\nWhy is securing an application important?\nAnswer:Securing an application is crucial to restrict\naccess to its functionalities from unauthorized\nentities, thereby preventing potential hacks or illegal\nmodifications. It ensures that sensitive data and\nprocesses are protected from misuse.\n2.Question\nWhat are the key differences between authentication and\nauthorization?\nAnswer:Authentication is the process of verifying an entity's\ncredentials (such as a username and password), while\nauthorization refers to giving that entity permission to\nperform specific actions once their identity is confirmed.\n3.Question\nWhat authentication methods does FastAPI support?\nAnswer:FastAPI supports basic HTTP authentication,\ncookies, and bearer token authentication with a common use\ncase being JWT (JSON Web Token). Each method has",
+      "Chapter 7 | Securing FastAPI Applications| Q&A\n1.Question\nWhy is securing an application important?\nAnswer:Securing an application is crucial to restrict\naccess to its functionalities from unauthorized\nentities, thereby preventing potential hacks or illegal\nmodifications. It ensures that sensitive data and\nprocesses are protected from misuse.\n2.Question\nWhat are the key differences between authentication and\nauthorization?\nAnswer:Authentication is the process of verifying an entity's\ncredentials (such as a username and password), while\nauthorization refers to giving that entity permission to\nperform specific actions once their identity is confirmed.\n3.Question\nWhat authentication methods does FastAPI support?\nAnswer:FastAPI supports basic HTTP authentication,\ncookies, and bearer token authentication with a common use\ncase being JWT (JSON Web Token). Each method has",
+      "Chapter 7 | Quotes From Pages 386-464\n1.Securing an application involves the addition of\nsecurity measures to restrict access to application\nfunctionalities from unauthorized entities to\nprevent hacks or illegal modifications of the\napplication.\n2.Authentication is the process of verifying the credentials\npassed by an entity and authorization simply means giving\nan entity permission to perform designated actions.\n3.By injecting the User model into the user function\nargument, we can easily retrieve the attributes of the object.\n4.JWTs are signed using a unique key known only to the\nserver and client to avoid the encoded string being\ntampered with by an external body.\n5.In this chapter, we learned how to secure a FastAPI\napplication with OAuth and JWT.\nChapter 8 | Quotes From Pages 467-536\n1.Testing is an integral part of the application\ndevelopment cycle."
+    ],
+    "retrieved_source_ids": [
+      "document_9_chunk_80",
+      "document_9_chunk_0",
+      "document_9_chunk_54"
+    ],
+    "retrieved_documents": [
+      "Building Python Web Apis With Fastapi PDF.pdf"
+    ]
+  },
+  {
+    "question": "What authentication methods does FastAPI support and what is a common use case for bearer token authentication?",
+    "expected_document": "Building Python Web Apis With Fastapi PDF.pdf",
+    "answer": "FastAPI supports basic HTTP authentication, cookies, and bearer token authentication with a common use case being JWT (JSON Web Token).",
+    "citations": [
+      "document_9_chunk_80"
+    ],
+    "retrieved_contexts": [
+      "- A MongoDB database is required, with code available on\nGitHub for reference.\nAuthentication Methods in FastAPI\nFastAPI supports several authentication methods:\n1. \nBasic HTTP Authentication\n: Credentials are sent with an Authorization header.\n2. \nCookies\n: Used to store user data on the client side.\n3. \nBearer Token Authentication\n: Involves using security tokens (like JWT) for authorization.\nIn this chapter, we will primarily utilize bearer token\nauthentication.\nDependency Injection in FastAPI\n- Dependency Injection allows the separation of concerns by\ninjecting functions that provide parameters needed during\nrequest handling.\n- Dependencies in FastAPI are defined as functions or classes",
+      "Chapter 7 | Securing FastAPI Applications| Q&A\n1.Question\nWhy is securing an application important?\nAnswer:Securing an application is crucial to restrict\naccess to its functionalities from unauthorized\nentities, thereby preventing potential hacks or illegal\nmodifications. It ensures that sensitive data and\nprocesses are protected from misuse.\n2.Question\nWhat are the key differences between authentication and\nauthorization?\nAnswer:Authentication is the process of verifying an entity's\ncredentials (such as a username and password), while\nauthorization refers to giving that entity permission to\nperform specific actions once their identity is confirmed.\n3.Question\nWhat authentication methods does FastAPI support?\nAnswer:FastAPI supports basic HTTP authentication,\ncookies, and bearer token authentication with a common use\ncase being JWT (JSON Web Token). Each method has",
+      "Chapter 7 | Securing FastAPI Applications| Quiz\nand Test\n1.Authenticating a user means verifying their\ncredentials.\n2.FastAPI does not support bearer token authentication as a\nmethod of securing an application.\n3.Dependency Injection is a method used in FastAPI to\nseparate concerns and manage dependencies during request\nhandling.\nChapter 8 | Testing FastAPI Applications| Quiz and\nTest\n1.Unit testing is unnecessary for FastAPI\napplications.\n2.Fixtures in pytest can return necessary data for tests and\nsimplify test setup.\n3.HTTPX is used for testing synchronous APIs in FastAPI\napplications.\nChapter 9 | Deploying FastAPI Applications| Quiz\nand Test\n1.Before deploying a FastAPI application, the"
+    ],
+    "retrieved_source_ids": [
+      "document_9_chunk_36",
+      "document_9_chunk_80",
+      "document_9_chunk_96"
+    ],
+    "retrieved_documents": [
+      "Building Python Web Apis With Fastapi PDF.pdf"
+    ]
+  },
+  {
+    "question": "What are Python decorators?",
+    "expected_document": "python-docs-readthedocs-io-en-latest.pdf",
+    "answer": "A decorator is a function or a class that wraps (or decorates) a function or a method.",
+    "citations": [
+      "document_10_chunk_108",
+      "document_10_chunk_109"
+    ],
+    "retrieved_contexts": [
+      "• Pure functions are easier to test with unit-tests: There is less need for complex context setup and data cleaning\nafterwards.\n• Pure functions are easier to manipulate, decorate, and pass around.\nIn summary, pure functions are more efﬁcient building blocks than classes and objects for some architectures because\nthey have no context or side-effects.\nObviously, object-orientation is useful and even necessary in many cases, for example when developing graphical\ndesktop applications or games, where the things that are manipulated (windows, buttons, avatars, vehicles) have a\nrelatively long life of their own in the computer’s memory.\nDecorators\nThe Python language provides a simple yet powerful syntax called ‘decorators’. A decorator is a function or a class that\nwraps (or decorates) a function or a method. The ‘decorated’ function or method will replace the original ‘undecorated’",
+      "wraps (or decorates) a function or a method. The ‘decorated’ function or method will replace the original ‘undecorated’\nfunction or method. Because functions are ﬁrst-class objects in Python, this can be done ‘manually’, but using the\n@decorator syntax is clearer and thus preferred.\ndef foo():\n# do something\ndef decorator(func):\n# manipulate func\nreturn func\nfoo = decorator(foo)\n# Manually decorate\n@decorator\ndef bar():\n# Do something\n# bar() is decorated\nThis mechanism is useful for separating concerns and avoiding external un-related logic ‘polluting’ the core logic\nof the function or method. A good example of a piece of functionality that is better handled with decoration is\nmemoization or caching: you want to store the results of an expensive function in a table and use them directly instead\nof recomputing them when they have already been computed. This is clearly not part of the function logic.\nContext Managers",
+      "Python Guide Documentation, Release 0.0.1\nPro Python\nExpert Python Programming\nExpert Python Programming deals with best practices in programming Python and is focused on the more advanced\ncrowd.\nIt starts with topics like decorators (with caching, proxy, and context manager case-studies), method resolution order,\nusing super() and meta-programming, and general PEP 8 best practices.\nIt has a detailed, multi-chapter case study on writing and releasing a package and eventually an application, includ-\ning a chapter on using zc.buildout. Later chapters detail best practices such as writing documentation, test-driven\ndevelopment, version control, optimization and proﬁling.\nExpert Python Programming\nA Guide to Python’s Magic Methods\nThis is a collection of blog posts by Rafe Kettler which explain ‘magic methods’ in Python. Magic methods are\nsurrounded by double underscores (i.e. __init__) and can make classes and objects behave in different and magical\nways.\nA Guide to Python’s Magic Methods"
+    ],
+    "retrieved_source_ids": [
+      "document_10_chunk_108",
+      "document_10_chunk_109",
+      "document_10_chunk_333"
+    ],
+    "retrieved_documents": [
+      "python-docs-readthedocs-io-en-latest.pdf"
+    ]
+  },
+  {
+    "question": "How does the @decorator syntax work in Python?",
+    "expected_document": "python-docs-readthedocs-io-en-latest.pdf",
+    "answer": "The @decorator syntax is used to clearly and manually decorate a function or method, replacing the original function or method.",
+    "citations": [
+      "document_10_chunk_109",
+      "document_10_chunk_108"
+    ],
+    "retrieved_contexts": [
+      "wraps (or decorates) a function or a method. The ‘decorated’ function or method will replace the original ‘undecorated’\nfunction or method. Because functions are ﬁrst-class objects in Python, this can be done ‘manually’, but using the\n@decorator syntax is clearer and thus preferred.\ndef foo():\n# do something\ndef decorator(func):\n# manipulate func\nreturn func\nfoo = decorator(foo)\n# Manually decorate\n@decorator\ndef bar():\n# Do something\n# bar() is decorated\nThis mechanism is useful for separating concerns and avoiding external un-related logic ‘polluting’ the core logic\nof the function or method. A good example of a piece of functionality that is better handled with decoration is\nmemoization or caching: you want to store the results of an expensive function in a table and use them directly instead\nof recomputing them when they have already been computed. This is clearly not part of the function logic.\nContext Managers",
+      "• Pure functions are easier to test with unit-tests: There is less need for complex context setup and data cleaning\nafterwards.\n• Pure functions are easier to manipulate, decorate, and pass around.\nIn summary, pure functions are more efﬁcient building blocks than classes and objects for some architectures because\nthey have no context or side-effects.\nObviously, object-orientation is useful and even necessary in many cases, for example when developing graphical\ndesktop applications or games, where the things that are manipulated (windows, buttons, avatars, vehicles) have a\nrelatively long life of their own in the computer’s memory.\nDecorators\nThe Python language provides a simple yet powerful syntax called ‘decorators’. A decorator is a function or a class that\nwraps (or decorates) a function or a method. The ‘decorated’ function or method will replace the original ‘undecorated’",
+      "helping identify untested code sections that may require\nadditional tests to improve application robustness.\n8.Question\nWhat does the assert statement do in the context of\npytest?\nAnswer:The assert statement in pytest is used to verify that a\nspecific condition holds true. If the condition is false, pytest\nwill raise an AssertionError and signal that the test has failed.\n9.Question\nWhat are the purposes of the @pytest.mark.asyncio\ndecorator in tests?\nAnswer:The @pytest.mark.asyncio decorator indicates that\nthe test function is asynchronous, allowing pytest to run the\ntest function in an event loop that is necessary for testing\nasynchronous code.\n10.Question\nWhat should you do if a test fails, according to the\ncontent?\nAnswer:If a test fails, you should check the failing assertion\nstatement to understand the discrepancy and correct either the"
+    ],
+    "retrieved_source_ids": [
+      "document_10_chunk_109",
+      "document_10_chunk_108",
+      "document_9_chunk_86"
+    ],
+    "retrieved_documents": [
+      "python-docs-readthedocs-io-en-latest.pdf",
+      "Building Python Web Apis With Fastapi PDF.pdf"
+    ]
+  },
+  {
+    "question": "What are pure functions in Python?",
+    "expected_document": "python-docs-readthedocs-io-en-latest.pdf",
+    "answer": "Pure functions in Python are functions with as few implicit contexts and side-effects as possible.",
+    "citations": [
+      "document_10_chunk_107",
+      "document_10_chunk_108"
+    ],
+    "retrieved_contexts": [
+      "• Pure functions are easier to test with unit-tests: There is less need for complex context setup and data cleaning\nafterwards.\n• Pure functions are easier to manipulate, decorate, and pass around.\nIn summary, pure functions are more efﬁcient building blocks than classes and objects for some architectures because\nthey have no context or side-effects.\nObviously, object-orientation is useful and even necessary in many cases, for example when developing graphical\ndesktop applications or games, where the things that are manipulated (windows, buttons, avatars, vehicles) have a\nrelatively long life of their own in the computer’s memory.\nDecorators\nThe Python language provides a simple yet powerful syntax called ‘decorators’. A decorator is a function or a class that\nwraps (or decorates) a function or a method. The ‘decorated’ function or method will replace the original ‘undecorated’",
+      "Python Guide Documentation, Release 0.0.1\nAnother way to say the same thing is to suggest using functions and procedures with as few implicit contexts and side-\neffects as possible. A function’s implicit context is made up of any of the global variables or items in the persistence\nlayer that are accessed from within the function. Side-effects are the changes that a function makes to its implicit\ncontext. If a function saves or deletes data in a global variable or in the persistence layer, it is said to have a side-effect.\nCarefully isolating functions with context and side-effects from functions with logic (called pure functions) allow the\nfollowing beneﬁts:\n• Pure functions are deterministic: given a ﬁxed input, the output will always be the same.\n• Pure functions are much easier to change or replace if they need to be refactored or optimized.\n• Pure functions are easier to test with unit-tests: There is less need for complex context setup and data cleaning\nafterwards.",
+      "needs to be clariﬁed.\nIn Python, everything is an object, and can be handled as such. This is what is meant when we say, for example,\nthat functions are ﬁrst-class objects. Functions, classes, strings, and even types are objects in Python: like any object,\nthey have a type, they can be passed as function arguments, and they may have methods and properties. In this\nunderstanding, Python is an object-oriented language.\nHowever, unlike Java, Python does not impose object-oriented programming as the main programming paradigm. It\nis perfectly viable for a Python project to not be object-oriented, i.e. to use no or very few class deﬁnitions, class\ninheritance, or any other mechanisms that are speciﬁc to object-oriented programming.\nMoreover, as seen in the modules section, the way Python handles modules and namespaces gives the developer a\nnatural way to ensure the encapsulation and separation of abstraction layers, both being the most common reasons to"
+    ],
+    "retrieved_source_ids": [
+      "document_10_chunk_108",
+      "document_10_chunk_107",
+      "document_10_chunk_104"
+    ],
+    "retrieved_documents": [
+      "python-docs-readthedocs-io-en-latest.pdf"
+    ]
+  },
+  {
+    "question": "Why are pure functions easier to test?",
+    "expected_document": "python-docs-readthedocs-io-en-latest.pdf",
+    "answer": "There is less need for complex context setup and data cleaning afterwards.",
+    "citations": [
+      "document_10_chunk_108",
+      "document_10_chunk_107"
+    ],
+    "retrieved_contexts": [
+      "• Pure functions are easier to test with unit-tests: There is less need for complex context setup and data cleaning\nafterwards.\n• Pure functions are easier to manipulate, decorate, and pass around.\nIn summary, pure functions are more efﬁcient building blocks than classes and objects for some architectures because\nthey have no context or side-effects.\nObviously, object-orientation is useful and even necessary in many cases, for example when developing graphical\ndesktop applications or games, where the things that are manipulated (windows, buttons, avatars, vehicles) have a\nrelatively long life of their own in the computer’s memory.\nDecorators\nThe Python language provides a simple yet powerful syntax called ‘decorators’. A decorator is a function or a class that\nwraps (or decorates) a function or a method. The ‘decorated’ function or method will replace the original ‘undecorated’",
+      "Python Guide Documentation, Release 0.0.1\nAnother way to say the same thing is to suggest using functions and procedures with as few implicit contexts and side-\neffects as possible. A function’s implicit context is made up of any of the global variables or items in the persistence\nlayer that are accessed from within the function. Side-effects are the changes that a function makes to its implicit\ncontext. If a function saves or deletes data in a global variable or in the persistence layer, it is said to have a side-effect.\nCarefully isolating functions with context and side-effects from functions with logic (called pure functions) allow the\nfollowing beneﬁts:\n• Pure functions are deterministic: given a ﬁxed input, the output will always be the same.\n• Pure functions are much easier to change or replace if they need to be refactored or optimized.\n• Pure functions are easier to test with unit-tests: There is less need for complex context setup and data cleaning\nafterwards.",
+      "2.Question\nWhat is unit testing, and why is it important?\nAnswer:Unit testing is a procedure where individual\ncomponents of an application are tested to verify their\nfunctionality. It is important because it allows developers to\nensure that specific parts of the code operate correctly,\nreducing the likelihood of defects in the final product.\n3.Question\nHow does pytest differ from Python's built-in unittest\nmodule?\nAnswer:Pytest offers a shorter syntax and more flexible\nfeatures than unittest, making it a preferred choice for testing\nPython applications due to its ease of use and powerful\nfunctionality.\n4.Question\nWhat role do fixtures play in pytest?\nAnswer:Fixtures in pytest are reusable functions that return\ndata needed by test functions. They help eliminate\nredundancy by allowing the setup of data or state that\nmultiple tests can share."
+    ],
+    "retrieved_source_ids": [
+      "document_10_chunk_108",
+      "document_10_chunk_107",
+      "document_9_chunk_84"
+    ],
+    "retrieved_documents": [
+      "python-docs-readthedocs-io-en-latest.pdf",
+      "Building Python Web Apis With Fastapi PDF.pdf"
+    ]
+  },
+  {
+    "question": "What is memoization and how can decorators be used for it?",
+    "expected_document": "python-docs-readthedocs-io-en-latest.pdf",
+    "answer": "Memoization is a technique where the results of an expensive function are stored in a table and used directly instead of recomputing them when they have already been computed. Decorators can be used for memoization by storing the results of a function in a table and returning the cached result instead of recomputing it.",
+    "citations": [
+      "document_10_chunk_109",
+      "document_10_chunk_108"
+    ],
+    "retrieved_contexts": [
+      "wraps (or decorates) a function or a method. The ‘decorated’ function or method will replace the original ‘undecorated’\nfunction or method. Because functions are ﬁrst-class objects in Python, this can be done ‘manually’, but using the\n@decorator syntax is clearer and thus preferred.\ndef foo():\n# do something\ndef decorator(func):\n# manipulate func\nreturn func\nfoo = decorator(foo)\n# Manually decorate\n@decorator\ndef bar():\n# Do something\n# bar() is decorated\nThis mechanism is useful for separating concerns and avoiding external un-related logic ‘polluting’ the core logic\nof the function or method. A good example of a piece of functionality that is better handled with decoration is\nmemoization or caching: you want to store the results of an expensive function in a table and use them directly instead\nof recomputing them when they have already been computed. This is clearly not part of the function logic.\nContext Managers",
+      "• Pure functions are easier to test with unit-tests: There is less need for complex context setup and data cleaning\nafterwards.\n• Pure functions are easier to manipulate, decorate, and pass around.\nIn summary, pure functions are more efﬁcient building blocks than classes and objects for some architectures because\nthey have no context or side-effects.\nObviously, object-orientation is useful and even necessary in many cases, for example when developing graphical\ndesktop applications or games, where the things that are manipulated (windows, buttons, avatars, vehicles) have a\nrelatively long life of their own in the computer’s memory.\nDecorators\nThe Python language provides a simple yet powerful syntax called ‘decorators’. A decorator is a function or a class that\nwraps (or decorates) a function or a method. The ‘decorated’ function or method will replace the original ‘undecorated’",
+      "applications?\nAnswer:Docker is a tool for containerizing applications,\nallowing you to package your app and its dependencies into a\nsingle container. This ensures consistency across different\nenvironments and simplifies deployment, as Docker images\ncan be easily shared and run anywhere.\n6.Question\nHow do you create a simple FastAPI application?\nAnswer:To create a simple FastAPI application, first install\nFastAPI and Uvicorn. Then, create an instance of FastAPI in\na file (e.g., api.py) and set up routes using decorators.\nFinally, run the application using Uvicorn with a command\nlike `uvicorn api:app --port 8000 --reload`.\n7.Question\nWhat is the purpose of a .gitignore file, and what common\nentries should it contain?\nAnswer:.gitignore is used to specify files and directories that\nGit should ignore, ensuring sensitive or unnecessary files are\nnot tracked. Common entries include environment files"
+    ],
+    "retrieved_source_ids": [
+      "document_10_chunk_109",
+      "document_10_chunk_108",
+      "document_9_chunk_59"
+    ],
+    "retrieved_documents": [
+      "python-docs-readthedocs-io-en-latest.pdf",
+      "Building Python Web Apis With Fastapi PDF.pdf"
+    ]
+  },
+  {
+    "question": "How can decorators help separate concerns in Python?",
+    "expected_document": "python-docs-readthedocs-io-en-latest.pdf",
+    "answer": "Decorators can help separate concerns in Python by avoiding external unrelated logic 'polluting' the core logic of the function or method.",
+    "citations": [
+      "document_10_chunk_109"
+    ],
+    "retrieved_contexts": [
+      "wraps (or decorates) a function or a method. The ‘decorated’ function or method will replace the original ‘undecorated’\nfunction or method. Because functions are ﬁrst-class objects in Python, this can be done ‘manually’, but using the\n@decorator syntax is clearer and thus preferred.\ndef foo():\n# do something\ndef decorator(func):\n# manipulate func\nreturn func\nfoo = decorator(foo)\n# Manually decorate\n@decorator\ndef bar():\n# Do something\n# bar() is decorated\nThis mechanism is useful for separating concerns and avoiding external un-related logic ‘polluting’ the core logic\nof the function or method. A good example of a piece of functionality that is better handled with decoration is\nmemoization or caching: you want to store the results of an expensive function in a table and use them directly instead\nof recomputing them when they have already been computed. This is clearly not part of the function logic.\nContext Managers",
+      "Instead of generating directly textual content from Python, the concept of separation of concerns advises us to use\ntemplates. A template engine manages a suite of template ﬁles, with a system of hierarchy and inclusion to avoid\nunnecessary repetition, and is in charge of rendering (generating) the actual content, ﬁlling the static content of the\ntemplates with the dynamic content generated by the application.\nAs template ﬁles are sometimes written by designers or front-end developers, it can be difﬁcult to handle increasing\ncomplexity.\nSome general good practices apply to the part of the application passing dynamic content to the template engine, and\nto the templates themselves.\n• Template ﬁles should be passed only the dynamic content that is needed for rendering the template. Avoid the\ntemptation to pass additional content “just in case”: it is easier to add some missing variable when needed than\nto remove a likely unused variable later.",
+      "• Pure functions are easier to test with unit-tests: There is less need for complex context setup and data cleaning\nafterwards.\n• Pure functions are easier to manipulate, decorate, and pass around.\nIn summary, pure functions are more efﬁcient building blocks than classes and objects for some architectures because\nthey have no context or side-effects.\nObviously, object-orientation is useful and even necessary in many cases, for example when developing graphical\ndesktop applications or games, where the things that are manipulated (windows, buttons, avatars, vehicles) have a\nrelatively long life of their own in the computer’s memory.\nDecorators\nThe Python language provides a simple yet powerful syntax called ‘decorators’. A decorator is a function or a class that\nwraps (or decorates) a function or a method. The ‘decorated’ function or method will replace the original ‘undecorated’"
+    ],
+    "retrieved_source_ids": [
+      "document_10_chunk_109",
+      "document_10_chunk_207",
+      "document_10_chunk_108"
+    ],
+    "retrieved_documents": [
+      "python-docs-readthedocs-io-en-latest.pdf"
+    ]
+  },
+  {
+    "question": "Why is the @decorator syntax preferred over manually decorating a function?",
+    "expected_document": "python-docs-readthedocs-io-en-latest.pdf",
+    "answer": "Because it is clearer",
+    "citations": [
+      "document_10_chunk_109"
+    ],
+    "retrieved_contexts": [
+      "wraps (or decorates) a function or a method. The ‘decorated’ function or method will replace the original ‘undecorated’\nfunction or method. Because functions are ﬁrst-class objects in Python, this can be done ‘manually’, but using the\n@decorator syntax is clearer and thus preferred.\ndef foo():\n# do something\ndef decorator(func):\n# manipulate func\nreturn func\nfoo = decorator(foo)\n# Manually decorate\n@decorator\ndef bar():\n# Do something\n# bar() is decorated\nThis mechanism is useful for separating concerns and avoiding external un-related logic ‘polluting’ the core logic\nof the function or method. A good example of a piece of functionality that is better handled with decoration is\nmemoization or caching: you want to store the results of an expensive function in a table and use them directly instead\nof recomputing them when they have already been computed. This is clearly not part of the function logic.\nContext Managers",
+      "• Pure functions are easier to test with unit-tests: There is less need for complex context setup and data cleaning\nafterwards.\n• Pure functions are easier to manipulate, decorate, and pass around.\nIn summary, pure functions are more efﬁcient building blocks than classes and objects for some architectures because\nthey have no context or side-effects.\nObviously, object-orientation is useful and even necessary in many cases, for example when developing graphical\ndesktop applications or games, where the things that are manipulated (windows, buttons, avatars, vehicles) have a\nrelatively long life of their own in the computer’s memory.\nDecorators\nThe Python language provides a simple yet powerful syntax called ‘decorators’. A decorator is a function or a class that\nwraps (or decorates) a function or a method. The ‘decorated’ function or method will replace the original ‘undecorated’",
+      "behavior: it divides one parameter by the other. So the behavior of a call to operate depends on the type of the \narguments passed because the function has been overloaded.  \nNotice that a function cannot be overloaded only by its return type. At least one of its parameters must have a \ndifferent type.  \ninline functions. \nThe inline specifier indicates the compiler that inline substitution is preferred to the usual function call mechanism \nfor a specific function. This does not change the behavior of a function itself, but is used to suggest to the compiler \nthat the code generated by the function body is inserted at each point the function is called, instead of being \ninserted only once and perform a regular call to it, which generally involves some additional overhead in running \ntime.  \nThe format for its declaration is:  \ninline type name ( arguments ... ) { instructions ... }"
+    ],
+    "retrieved_source_ids": [
+      "document_10_chunk_109",
+      "document_10_chunk_108",
+      "document_14_chunk_135"
+    ],
+    "retrieved_documents": [
+      "python-docs-readthedocs-io-en-latest.pdf",
+      "cpp_tutorial.pdf"
+    ]
+  },
+  {
+    "question": "What is an index in PostgreSQL?",
+    "expected_document": "postgres-notes-readthedocs-io-en-latest.pdf",
+    "answer": "An index in PostgreSQL is a data structure that improves the speed of data retrieval by allowing the database to quickly locate data.",
+    "citations": [
+      "document_11_chunk_88"
+    ],
+    "retrieved_contexts": [
+      "postgres notes\nTip:\nIf referenced column(s) are changed frequently, it’s recommended to add an index to them so that referential\nactions associated with the foreign key constraint can be performed more efficiently.\n3.4.6 6. Exclusion Constraints\nEnsure that if any two rows are compared on the specified columns or expressions using the specified operators, at least\none of these operator comparisons will return false or null.\nAdding an exclusion constraint will automatically create an index of the type specified in the constraint declaration.\nCREATE TABLE circles (\nc circle,\nEXCLUDE USING gist (c WITH &&)\n-- no overlapping cirlces\n);\n3.5 System Columns\nEvery table has several system columns that are implicitly defined by the system:\n• tableoid: The OID of the table containing this row.\n– Handy for queries that select from partitioned tables or inheritance heirachies (tells which particular table\na row came from)\n– Can be joined with the oid column of pg_class to obtain the table name.",
+      "postgres notes\n7.4.3 format\nProduces output as specified by a format string, in likeness to C’s sprintf function.\nformat(formatstr text [, formatarg \"any\" [, ...] ])\n--e.g format('Hi %s', 'there!')\nformatstr specifies how output should be formatted.\nEach formatarg is converted to text, and then inserted into the result string as stipulated by format specifiers.\nFormat Specifiers\n%[position][flags][width]type\n• position: (optional)\n– n$ where n is the index of the argument to print.\n– 1 refers to the first arg after formatstr, and so on.\n– If omitted, args are used in sequence.\n• flags: (optional)\n– - causes output to be left-justified, but only if width is also specified.\n• width: (optional)\n– n, -n, *(use next function arg as the width) or *n$(use nth function arg as the width).\n– Specifies the minimum number of characters to use to display the format specifier’s output.\n– Output is left/right padded depending on the - flag.\n– Very small widths are ignored; output is not truncated.",
+      "postgres notes\n2.7 Constants of other types\nA constant of an arbitrary type can be entered using any one of the following notations:\n• CAST ( 'string' AS type )\nmydb=> SELECT CAST (b'110' AS int); -- Standard SQL\nint4\n------\n6\n(1 row)\n• type 'string'\nmydb=> SELECT interval '1 decade';\ninterval\n----------\n10 years\n(1 row)\n• 'string'::type\nmydb=> SELECT '123'::numeric(5,2);\n-- historical PostgreSQL\nnumeric\n---------\n123.00\n(1 row)\n2.1.3 3. Operators\n+ - * / < > = ~ ! @ # % ^ & | ` ?\nRestrictions:\n• -- and /* cannot appear anywhere in an operator name: interpreted as start of comment.\n• multiple-character operator names cannot end in + or - unless they also contain at least one of\n~ ! @ # % ^ & | ` ?\ne.g. @- is valid, but *- is not.\nThis restriction allows PostgreSQL to parse SQL-compliant queries without requiring spaces between tokens.\n• When working with non-SQL-standard operator names, separate adjacent operators with spaces to avoid ambi-\nguity.\n20\nChapter 2. SQL Syntax"
+    ],
+    "retrieved_source_ids": [
+      "document_11_chunk_88",
+      "document_11_chunk_209",
+      "document_11_chunk_48"
+    ],
+    "retrieved_documents": [
+      "postgres-notes-readthedocs-io-en-latest.pdf"
+    ]
+  },
+  {
+    "question": "Why are indexes useful in PostgreSQL?",
+    "expected_document": "postgres-notes-readthedocs-io-en-latest.pdf",
+    "answer": "referential actions associated with the foreign key constraint can be performed more efficiently",
+    "citations": [
+      "document_11_chunk_88"
+    ],
+    "retrieved_contexts": [
+      "postgres notes\nTip:\nIf referenced column(s) are changed frequently, it’s recommended to add an index to them so that referential\nactions associated with the foreign key constraint can be performed more efficiently.\n3.4.6 6. Exclusion Constraints\nEnsure that if any two rows are compared on the specified columns or expressions using the specified operators, at least\none of these operator comparisons will return false or null.\nAdding an exclusion constraint will automatically create an index of the type specified in the constraint declaration.\nCREATE TABLE circles (\nc circle,\nEXCLUDE USING gist (c WITH &&)\n-- no overlapping cirlces\n);\n3.5 System Columns\nEvery table has several system columns that are implicitly defined by the system:\n• tableoid: The OID of the table containing this row.\n– Handy for queries that select from partitioned tables or inheritance heirachies (tells which particular table\na row came from)\n– Can be joined with the oid column of pg_class to obtain the table name.",
+      "postgres notes\n2. Deleting a database\nUse the dropdb command:\n$ dropdb mydb\nPermanently removes all files related to the database. Can’t be undone. Database name must always be specified.\n3. Accessing a database\nYou can use:\n• the PostgreSQL interactive terminal program, psql\n$ psql mydb\npsql (15.3)\nType \"help\" for help.\nmydb=>\n• a graphical frontend tool e.g. pgAdmin\n• a custom application, using available language bindings.\nWe’ll focus on psql.\n1.2 Basics\nSQL (Structured Query Language) is a domain-specific language used to manage / process data stored in relational\ndatabase management systems (RDBMS) e.g MySQL, PostgreSQL, SQLite. A relation is a table.\nA table is a named collection of rows. Several tables can be grouped in a database. A collection of databases managed\nby a single server instance is called a database cluster.\nEach row has the same set of named columns. The order of rows within a table is not guaranteed, but you can sort\nvalues for display.",
+      "standard).\n• Should be less than 63 bytes by default, or they’ll be truncated (NAMEDATALEN defaults to 64, and the limit is\nNAMEDATALEN - 1)\n• Are case insensitive, except for delimited / quoted identifiers(enclosed in \"\"; can include spaces, ampersands(&)\nand more).\n– In SQL, unquoted identifiers are folded to uppercase. In PostgreSQL they’re folded to lowercase.\n– A convention often used is to write key words in upper case and names in lower case.\nSELECT col_name FROM table_name;\nNote: A delimited identifier is always an identifier e.g. \"select\" is a name but select is a key word.\n17"
+    ],
+    "retrieved_source_ids": [
+      "document_11_chunk_88",
+      "document_11_chunk_10",
+      "document_11_chunk_43"
+    ],
+    "retrieved_documents": [
+      "postgres-notes-readthedocs-io-en-latest.pdf"
+    ]
+  },
+  {
+    "question": "What are PostgreSQL system columns?",
+    "expected_document": "postgres-notes-readthedocs-io-en-latest.pdf",
+    "answer": "id, table_name, table_schema, table_catalog, column_name, ordinal_position, data_type, character_maximum_length, character_octet_length, numeric_precision, numeric_scale, is_nullable, column_default, is_identity, identity_start, identity_increment, identity_seed, identity_increment, identity_current, generation_expression, is_generated_always_as_id, is_generated_always_as_default, is_updatable",
+    "citations": [
+      "document_11_chunk_103",
+      "document_11_chunk_112"
+    ],
+    "retrieved_contexts": [
+      "postgres notes\n2.3 String constants with Unicode escapes\nPostgreSQL extension. Specified by u&'...' or U&'...'. Allows specifying arbitrary Unicode characters by code\npoint (4-digit or 6-digit hexadecimal, prefixed with \\ or \\+ respectively).\nmydb=> SELECT U&'d\\0061t\\+000061';\n?column?\n----------\ndata\n(1 row)\n2.4 Dollar-quoted string constants\nPostgreSQL extension. Specified by $$...$$ or $optional_tag$...$optional_tag$. The optional tag is case-\nsensitive, and can be nested by choosing a different tag at each nesting level.\nContents are taken literally (no escapes), enhancing readability and eliminating the need to double escape characters.\nmydb=> SELECT $$Jane's book$$;\n-- equivalent to SELECT 'Jane''s book';\n?column?\n-------------\nJane's book\n(1 row)\nParticularly useful in function definitions in PostgreSQL.\n2.5 Bit-string constants\nBinary notation only allows 0 and 1 e.g. B'101, b'111'. Hexadecimal notation is preceeded by x or X e.g. x'abc'.\n2.6 Numeric constants\nGeneral forms:",
+      "postgres notes\n– Allows SELECT on all (or specific) columns of a table, view, materialized view or other table-like object.\n– Allows COPY TO.\n– Required to reference existing column values in UPDATE, DELETE or MERGE.\n– Allows currval function in sequences.\n– Allows large objects to be read.\n• INSERT\n– Allows INSERT of new rows to all / specified columns.\n– Allows COPY FROM.\n• UPDATE\n– Allows UPDATE on any / specified columns.\n– Typically requires the SELECT privilege to determine rows to update.\n– Required in SELECT ... FOR UPDATE and SELECT ... FOR SHARE.\n– Allows nextval and setval functions in sequences.\n– Allows writing and truncating large objects.\n• DELETE\n– Allows DELETE on rows from a table, view, ...\n– Typically requires SELECT privilege - to reference table columns and determine what rows to delete.\n• TRUNCATE\n– Allows TRUNCATE on a table.\n• REFERENCES\n– Allows creation of a foreign key constraint.\n• TRIGGER\n– Allows creation of a trigger on a table, view, ...\n• CREATE",
+      "postgres notes\n3.7.2 Access Control List (ACL) Privilege Abbreviations\nPrivilege\nAbbrevi-\nation\nApplicable Object Types\nSELECT\nr (“read”)\nLARGE OBJECT, SEQUENCE, TABLE (and table-like objects), table column\nINSERT\na\n(“ap-\npend”)\nTABLE, table column\nUPDATE\nw\n(“write”)\nLARGE OBJECT, SEQUENCE, TABLE, table column\nDELETE\nd\nTABLE\nTRUNCATE\nD\nTABLE\nREFER-\nENCES\nx\nTABLE, table column\nTRIGGER\nt\nTABLE\nCREATE\nC\nDATABASE, SCHEMA, TABLESPACE\nCONNECT\nc\nDATABASE\nTEMPO-\nRARY\nT\nDATABASE\nEXECUTE\nX\nFUNCTION, PROCEDURE\nUSAGE\nU\nDOMAIN, FOREIGN DATA WRAPPER, FOREIGN SERVER, LANGUAGE,\nSCHEMA, SEQUENCE, TYPE\nSET\ns\nPARAMETER\nALTER SYS-\nTEM\nA\nPARAMETER\n3.7.3 Summary of Access Privileges\nObject Type\nAll Privileges\nDefault PUBLIC Privileges\npsql Command\nDATABASE\nCTc\nTc\n\\l\nDOMAIN\nU\nU\n\\dD+\nFUNCTION or PROCEDURE\nX\nX\n\\df+\nFOREIGN DATA WRAPPER\nU\nnone\n\\dew+\nFOREIGN SERVER\nU\nnone\n\\des+\nLANGUAGE\nU\nU\n\\dL+\nLARGE OBJECT\nrw\nnone\nSCHEMA\nUC\nnone\n\\dn+\nSEQUENCE\nrwU\nnone\n\\dp\nTABLE (and table-like objects)\narwdDxt\nnone\n\\dp"
+    ],
+    "retrieved_source_ids": [
+      "document_11_chunk_46",
+      "document_11_chunk_103",
+      "document_11_chunk_112"
+    ],
+    "retrieved_documents": [
+      "postgres-notes-readthedocs-io-en-latest.pdf"
+    ]
+  },
+  {
+    "question": "What is the purpose of the tableoid system column in PostgreSQL?",
+    "expected_document": "postgres-notes-readthedocs-io-en-latest.pdf",
+    "answer": "The OID of the table containing this row, handy for queries that select from partitioned tables or inheritance heirachies (tells which particular table a row came from).",
+    "citations": [
+      "document_11_chunk_88"
+    ],
+    "retrieved_contexts": [
+      "postgres notes\nTip:\nIf referenced column(s) are changed frequently, it’s recommended to add an index to them so that referential\nactions associated with the foreign key constraint can be performed more efficiently.\n3.4.6 6. Exclusion Constraints\nEnsure that if any two rows are compared on the specified columns or expressions using the specified operators, at least\none of these operator comparisons will return false or null.\nAdding an exclusion constraint will automatically create an index of the type specified in the constraint declaration.\nCREATE TABLE circles (\nc circle,\nEXCLUDE USING gist (c WITH &&)\n-- no overlapping cirlces\n);\n3.5 System Columns\nEvery table has several system columns that are implicitly defined by the system:\n• tableoid: The OID of the table containing this row.\n– Handy for queries that select from partitioned tables or inheritance heirachies (tells which particular table\na row came from)\n– Can be joined with the oid column of pg_class to obtain the table name.",
+      "postgres notes\n3.3.1 Rules\n• The generation expression can only use immutable functions, and cannot use subqueries or reference anything\nother than the current row.\n• A generation expression cannot reference another generated column.\n• A generation expression cannot reference a system column, except tableoid.\n• A generated column cannot have a column default or identity definition.\n• A generated column cannot be part of a partition key.\n• Foreign tables can have generated columns (CREATE FOREIGN TABLE).\n• For inheritance:\n– If a parent column is a generated column, a child column must also be a generated column using the same\nexpression. In the definition of the child column, leave off the GENERATED clause, as it will be copied\nfrom the parent.\n– In case of multiple inheritance, if one parent column is a generated column, then all parent columns must\nbe generated columns and with the same expression.",
+      "postgres notes\n– Allows SELECT on all (or specific) columns of a table, view, materialized view or other table-like object.\n– Allows COPY TO.\n– Required to reference existing column values in UPDATE, DELETE or MERGE.\n– Allows currval function in sequences.\n– Allows large objects to be read.\n• INSERT\n– Allows INSERT of new rows to all / specified columns.\n– Allows COPY FROM.\n• UPDATE\n– Allows UPDATE on any / specified columns.\n– Typically requires the SELECT privilege to determine rows to update.\n– Required in SELECT ... FOR UPDATE and SELECT ... FOR SHARE.\n– Allows nextval and setval functions in sequences.\n– Allows writing and truncating large objects.\n• DELETE\n– Allows DELETE on rows from a table, view, ...\n– Typically requires SELECT privilege - to reference table columns and determine what rows to delete.\n• TRUNCATE\n– Allows TRUNCATE on a table.\n• REFERENCES\n– Allows creation of a foreign key constraint.\n• TRIGGER\n– Allows creation of a trigger on a table, view, ...\n• CREATE"
+    ],
+    "retrieved_source_ids": [
+      "document_11_chunk_88",
+      "document_11_chunk_70",
+      "document_11_chunk_103"
+    ],
+    "retrieved_documents": [
+      "postgres-notes-readthedocs-io-en-latest.pdf"
+    ]
+  },
+  {
+    "question": "What happens when an exclusion constraint is added in PostgreSQL?",
+    "expected_document": "postgres-notes-readthedocs-io-en-latest.pdf",
+    "answer": "Adding an exclusion constraint will automatically create an index of the type specified in the constraint declaration.",
+    "citations": [
+      "document_11_chunk_88"
+    ],
+    "retrieved_contexts": [
+      "postgres notes\nTip:\nIf referenced column(s) are changed frequently, it’s recommended to add an index to them so that referential\nactions associated with the foreign key constraint can be performed more efficiently.\n3.4.6 6. Exclusion Constraints\nEnsure that if any two rows are compared on the specified columns or expressions using the specified operators, at least\none of these operator comparisons will return false or null.\nAdding an exclusion constraint will automatically create an index of the type specified in the constraint declaration.\nCREATE TABLE circles (\nc circle,\nEXCLUDE USING gist (c WITH &&)\n-- no overlapping cirlces\n);\n3.5 System Columns\nEvery table has several system columns that are implicitly defined by the system:\n• tableoid: The OID of the table containing this row.\n– Handy for queries that select from partitioned tables or inheritance heirachies (tells which particular table\na row came from)\n– Can be joined with the oid column of pg_class to obtain the table name.",
+      "postgres notes\n(continued from previous page)\nLemonade |\n5.50 | cool\n(2 rows)\nThe column’s data and constraints disappear. If the column is referenced by a foreign key constraint in another table,\nan error is raised unless you add a CASCADE clause.\n3.6.3 3. Adding a Constraint\nUse the table constraint syntax:\nmydb=> ALTER TABLE beverages ADD UNIQUE (name, serving_temp);\nALTER TABLE\nmydb=> INSERT INTO beverages VALUES ('Tea', 9.50, 'hot');\nERROR:\nduplicate key value violates unique constraint \"beverages_name_serving_temp_key\"\nDETAIL:\nKey (name, serving_temp)=(Tea, hot) already exists.\nTo add a not-null constraint (can’t be written as a table constraint) use:\nmydb=> ALTER TABLE beverages ALTER COLUMN name SET NOT NULL;\nALTER TABLE\nmydb=> INSERT INTO beverages (price, serving_temp) VALUES (9.50, 'hot');\nERROR:\nnull value in column \"name\" of relation \"beverages\" violates not-null constraint\nDETAIL:\nFailing row contains (null, 9.50, hot).",
+      "DETAIL:\nFailing row contains (Water, 1.00, icy).\nmydb=> INSERT INTO beverages (name, price, serving_temp) VALUES ('Water', 1, 'room');\nINSERT 0 1\nCaution:\nPostgreSQL assumes that CHECK constraints’ conditions are immutable. In case of changes, drop the\nconstraint (using ALTER TABLE) and then re-add it to re-check it against all rows.\n3.4.2 2. Not-Null Constraints\nSpecify that a column must not assume the null value. Always written as column constraints.\nmydb=> DROP TABLE beverages;\nDROP TABLE\nmydb=> CREATE TABLE beverages (\nmydb(>\nname\ntext NOT NULL,\nmydb(>\nprice\nnumeric(5,2) NOT NULL,\nmydb(>\nserving_temp\ntext\nmydb(> );\nCREATE TABLE\nmydb=> INSERT INTO beverages (name, serving_temp) VALUES ('Milk', 'warm');\nERROR:\nnull value in column \"price\" of relation \"beverages\" violates not-null constraint\nDETAIL:\nFailing row contains (Milk, null, warm).\nmydb=> INSERT INTO beverages (name, price) VALUES ('Milk', 7.50);\n-- NULL serving_temp␣\n˓→not restricted\nINSERT 0 1"
+    ],
+    "retrieved_source_ids": [
+      "document_11_chunk_88",
+      "document_11_chunk_93",
+      "document_11_chunk_76"
+    ],
+    "retrieved_documents": [
+      "postgres-notes-readthedocs-io-en-latest.pdf"
+    ]
+  },
+  {
+    "question": "How can indexes improve foreign key referential actions in PostgreSQL?",
+    "expected_document": "postgres-notes-readthedocs-io-en-latest.pdf",
+    "answer": "Adding an index to frequently changed referenced column(s) can improve referential actions associated with the foreign key constraint.",
+    "citations": [
+      "document_11_chunk_88"
+    ],
+    "retrieved_contexts": [
+      "postgres notes\nTip:\nIf referenced column(s) are changed frequently, it’s recommended to add an index to them so that referential\nactions associated with the foreign key constraint can be performed more efficiently.\n3.4.6 6. Exclusion Constraints\nEnsure that if any two rows are compared on the specified columns or expressions using the specified operators, at least\none of these operator comparisons will return false or null.\nAdding an exclusion constraint will automatically create an index of the type specified in the constraint declaration.\nCREATE TABLE circles (\nc circle,\nEXCLUDE USING gist (c WITH &&)\n-- no overlapping cirlces\n);\n3.5 System Columns\nEvery table has several system columns that are implicitly defined by the system:\n• tableoid: The OID of the table containing this row.\n– Handy for queries that select from partitioned tables or inheritance heirachies (tells which particular table\na row came from)\n– Can be joined with the oid column of pg_class to obtain the table name.",
+      "A foreign key that references its own table is called a self-referential foreign key. Useful in some cases e.g. to make\ntable rows represent nodes of a tree structure.\nYou can specify what action to take when an item in a referenced row has to be removed (ON DELETE) or changed (ON\nUPDATE):\n• NO ACTION: Produce an error indicating that the deletion or update would create a foreign key constraint viola-\ntion.\n• RESTRICT: Just like NO ACTION, but can’t be deferred (is checked immediately).\n• CASCADE: Delete any rows referencing the deleted row, or update the values of the referencing column(s) to the\nnew values of the referenced columns, respectively.\n• SET NULL: Set all of the referencing columns (or a specified subset, only for ON DELETE) to null.\n• SET DEFAULT: Set all of the referencing columns (or a specified subset, only for ON DELETE) to their default\nvalues.\ne.g.\nCREATE TABLE order_items (\nproduct_no\ninteger REFERENCES products ON DELETE RESTRICT,\norder_id",
+      "postgres notes\n(continued from previous page)\nLemonade |\n5.50 | cool\n(2 rows)\nThe column’s data and constraints disappear. If the column is referenced by a foreign key constraint in another table,\nan error is raised unless you add a CASCADE clause.\n3.6.3 3. Adding a Constraint\nUse the table constraint syntax:\nmydb=> ALTER TABLE beverages ADD UNIQUE (name, serving_temp);\nALTER TABLE\nmydb=> INSERT INTO beverages VALUES ('Tea', 9.50, 'hot');\nERROR:\nduplicate key value violates unique constraint \"beverages_name_serving_temp_key\"\nDETAIL:\nKey (name, serving_temp)=(Tea, hot) already exists.\nTo add a not-null constraint (can’t be written as a table constraint) use:\nmydb=> ALTER TABLE beverages ALTER COLUMN name SET NOT NULL;\nALTER TABLE\nmydb=> INSERT INTO beverages (price, serving_temp) VALUES (9.50, 'hot');\nERROR:\nnull value in column \"name\" of relation \"beverages\" violates not-null constraint\nDETAIL:\nFailing row contains (null, 9.50, hot)."
+    ],
+    "retrieved_source_ids": [
+      "document_11_chunk_88",
+      "document_11_chunk_86",
+      "document_11_chunk_93"
+    ],
+    "retrieved_documents": [
+      "postgres-notes-readthedocs-io-en-latest.pdf"
+    ]
+  },
+  {
+    "question": "How can tableoid be used with the oid column of pg_class?",
+    "expected_document": "postgres-notes-readthedocs-io-en-latest.pdf",
+    "answer": "Can be joined to obtain the table name.",
+    "citations": [
+      "document_11_chunk_89",
+      "document_11_chunk_88"
+    ],
+    "retrieved_contexts": [
+      "a row came from)\n– Can be joined with the oid column of pg_class to obtain the table name.\n• xmin: The identity (transaction ID) of the inserting transaction for this row version.\n• cmin: The command identifier (starting at zero) within the inserting transaction.\n• xmax: The identity (transaction id) of the deleting transaction, or zero for an undeleted row version. If non-zero\nin a visible row version, this signifies an uncommitted or rolled-back deleting transaction.\n• cmax: The command identifier within the deleting transaction, or zero.\n• ctid: The physical location of the row within its table. Changes if a row is updated or moved by VACUUM FULL.\nmydb=> CREATE TABLE alphabet (letter char(1));\nCREATE TABLE\nmydb=> INSERT INTO alphabet VALUES ('a'), ('b');\nINSERT 0 2\nmydb=> INSERT INTO alphabet VALUES ('c'), ('d');\nINSERT 0 2\nmydb=> SELECT letter, tableoid, xmin, cmin, xmax, cmax, ctid FROM alphabet;\nletter | tableoid | xmin | cmin | xmax | cmax | ctid",
+      "postgres notes\nTip:\nIf referenced column(s) are changed frequently, it’s recommended to add an index to them so that referential\nactions associated with the foreign key constraint can be performed more efficiently.\n3.4.6 6. Exclusion Constraints\nEnsure that if any two rows are compared on the specified columns or expressions using the specified operators, at least\none of these operator comparisons will return false or null.\nAdding an exclusion constraint will automatically create an index of the type specified in the constraint declaration.\nCREATE TABLE circles (\nc circle,\nEXCLUDE USING gist (c WITH &&)\n-- no overlapping cirlces\n);\n3.5 System Columns\nEvery table has several system columns that are implicitly defined by the system:\n• tableoid: The OID of the table containing this row.\n– Handy for queries that select from partitioned tables or inheritance heirachies (tells which particular table\na row came from)\n– Can be joined with the oid column of pg_class to obtain the table name.",
+      "postgres notes\n3.3.1 Rules\n• The generation expression can only use immutable functions, and cannot use subqueries or reference anything\nother than the current row.\n• A generation expression cannot reference another generated column.\n• A generation expression cannot reference a system column, except tableoid.\n• A generated column cannot have a column default or identity definition.\n• A generated column cannot be part of a partition key.\n• Foreign tables can have generated columns (CREATE FOREIGN TABLE).\n• For inheritance:\n– If a parent column is a generated column, a child column must also be a generated column using the same\nexpression. In the definition of the child column, leave off the GENERATED clause, as it will be copied\nfrom the parent.\n– In case of multiple inheritance, if one parent column is a generated column, then all parent columns must\nbe generated columns and with the same expression."
+    ],
+    "retrieved_source_ids": [
+      "document_11_chunk_89",
+      "document_11_chunk_88",
+      "document_11_chunk_70"
+    ],
+    "retrieved_documents": [
+      "postgres-notes-readthedocs-io-en-latest.pdf"
+    ]
+  },
+  {
+    "question": "What is Docker?",
+    "expected_document": "TheDockerBook_sample.pdf",
+    "answer": "Docker is a containerization technology that allows applications to run in self-contained environments, making it easier to manage dependencies and ensure that applications work across different environments.",
+    "citations": [
+      "document_9_chunk_88",
+      "document_15_chunk_6"
+    ],
+    "retrieved_contexts": [
+      "all packages installed in the development environment.\n4.Question\nHow do we configure environment variables for the\nFastAPI application?\nAnswer:Environment variables can be injected during\ndeployment and should be kept out of version control\nsystems such as GitHub for security.\n5.Question\nWhat is Docker, and why is it useful for deploying\nFastAPI applications?\nAnswer:Docker is a containerization technology that allows\napplications to run in self-contained environments, making it\neasier to manage dependencies and ensure that applications\nwork across different environments.\n6.Question\nWhat is the purpose of a Dockerfile?\nAnswer:A Dockerfile contains a set of instructions for\nbuilding a Docker image, which can then be deployed to run\napplications.\n7.Question",
+      "Chapter 1: Working with Docker images and repositories\nand share your own images. We’ll also examine the repositories that hold images\nand the registries that store repositories.\nWhat is a Docker image?\nLet’s continue our journey with Docker by learning a bit more about Docker im-\nages. A Docker image is made up of filesystems layered over each other. At the\nbase is a boot filesystem, bootfs, which resembles the typical Linux/Unix boot\nfilesystem. A Docker user will probably never interact with the boot filesystem.\nIndeed, when a container has booted, it is moved into memory, and the boot\nfilesystem is unmounted to free up the RAM used by the initrd disk image.\nSo far this looks pretty much like a typical Linux virtualization stack. Indeed,\nDocker next layers a root filesystem, rootfs, on top of the boot filesystem. This\nrootfs can be one or more operating systems (e.g., a Debian or Ubuntu filesys-\ntem).\nIn a more traditional Linux boot, the root filesystem is mounted read-only and",
+      "What command is used to build a Docker image?\nAnswer:The command `docker build -t <image-name> .` is\nused to build a Docker image from the instructions defined in\nthe current directory.\n8.Question\nWhat is a docker-compose file, and what does it do?\nAnswer:A docker-compose file (usually named\n`docker-compose.yml`) defines and manages multi-container\nDocker applications, allowing services to be easily started,\nstopped, and configured.\n9.Question\nHow do you verify that the FastAPI application is\nrunning successfully after deployment?\nAnswer:You can send a GET request to the application's\nendpoint (e.g., `http://localhost:8080/event/`) and check the\nresponse.\n10.Question\nWhat command is used to stop the services in a Docker\ndeployment?\nAnswer:The command `docker-compose down` is used to"
+    ],
+    "retrieved_source_ids": [
+      "document_9_chunk_88",
+      "document_15_chunk_6",
+      "document_9_chunk_89"
+    ],
+    "retrieved_documents": [
+      "Building Python Web Apis With Fastapi PDF.pdf",
+      "TheDockerBook_sample.pdf"
+    ]
+  },
+  {
+    "question": "What is a Docker container?",
+    "expected_document": "TheDockerBook_sample.pdf",
+    "answer": "A Docker container is a runtime instance of a Docker image, which provides a self-contained environment for an application.",
+    "citations": [
+      "document_15_chunk_6"
+    ],
+    "retrieved_contexts": [
+      "applications?\nAnswer:Docker is a tool for containerizing applications,\nallowing you to package your app and its dependencies into a\nsingle container. This ensures consistency across different\nenvironments and simplifies deployment, as Docker images\ncan be easily shared and run anywhere.\n6.Question\nHow do you create a simple FastAPI application?\nAnswer:To create a simple FastAPI application, first install\nFastAPI and Uvicorn. Then, create an instance of FastAPI in\na file (e.g., api.py) and set up routes using decorators.\nFinally, run the application using Uvicorn with a command\nlike `uvicorn api:app --port 8000 --reload`.\n7.Question\nWhat is the purpose of a .gitignore file, and what common\nentries should it contain?\nAnswer:.gitignore is used to specify files and directories that\nGit should ignore, ensuring sensitive or unnecessary files are\nnot tracked. Common entries include environment files",
+      "all packages installed in the development environment.\n4.Question\nHow do we configure environment variables for the\nFastAPI application?\nAnswer:Environment variables can be injected during\ndeployment and should be kept out of version control\nsystems such as GitHub for security.\n5.Question\nWhat is Docker, and why is it useful for deploying\nFastAPI applications?\nAnswer:Docker is a containerization technology that allows\napplications to run in self-contained environments, making it\neasier to manage dependencies and ensure that applications\nwork across different environments.\n6.Question\nWhat is the purpose of a Dockerfile?\nAnswer:A Dockerfile contains a set of instructions for\nbuilding a Docker image, which can then be deployed to run\napplications.\n7.Question",
+      "Chapter 1: Working with Docker images and repositories\nand share your own images. We’ll also examine the repositories that hold images\nand the registries that store repositories.\nWhat is a Docker image?\nLet’s continue our journey with Docker by learning a bit more about Docker im-\nages. A Docker image is made up of filesystems layered over each other. At the\nbase is a boot filesystem, bootfs, which resembles the typical Linux/Unix boot\nfilesystem. A Docker user will probably never interact with the boot filesystem.\nIndeed, when a container has booted, it is moved into memory, and the boot\nfilesystem is unmounted to free up the RAM used by the initrd disk image.\nSo far this looks pretty much like a typical Linux virtualization stack. Indeed,\nDocker next layers a root filesystem, rootfs, on top of the boot filesystem. This\nrootfs can be one or more operating systems (e.g., a Debian or Ubuntu filesys-\ntem).\nIn a more traditional Linux boot, the root filesystem is mounted read-only and"
+    ],
+    "retrieved_source_ids": [
+      "document_9_chunk_59",
+      "document_9_chunk_88",
+      "document_15_chunk_6"
+    ],
+    "retrieved_documents": [
+      "Building Python Web Apis With Fastapi PDF.pdf",
+      "TheDockerBook_sample.pdf"
+    ]
+  },
+  {
+    "question": "What is a Docker image?",
+    "expected_document": "TheDockerBook_sample.pdf",
+    "answer": "A Docker image is made up of filesystems layered over each other, with a boot filesystem at the base and a root filesystem on top, which can be one or more operating systems.",
+    "citations": [
+      "document_15_chunk_6"
+    ],
+    "retrieved_contexts": [
+      "Chapter 1: Working with Docker images and repositories\nand share your own images. We’ll also examine the repositories that hold images\nand the registries that store repositories.\nWhat is a Docker image?\nLet’s continue our journey with Docker by learning a bit more about Docker im-\nages. A Docker image is made up of filesystems layered over each other. At the\nbase is a boot filesystem, bootfs, which resembles the typical Linux/Unix boot\nfilesystem. A Docker user will probably never interact with the boot filesystem.\nIndeed, when a container has booted, it is moved into memory, and the boot\nfilesystem is unmounted to free up the RAM used by the initrd disk image.\nSo far this looks pretty much like a typical Linux virtualization stack. Indeed,\nDocker next layers a root filesystem, rootfs, on top of the boot filesystem. This\nrootfs can be one or more operating systems (e.g., a Debian or Ubuntu filesys-\ntem).\nIn a more traditional Linux boot, the root filesystem is mounted read-only and",
+      "applications?\nAnswer:Docker is a tool for containerizing applications,\nallowing you to package your app and its dependencies into a\nsingle container. This ensures consistency across different\nenvironments and simplifies deployment, as Docker images\ncan be easily shared and run anywhere.\n6.Question\nHow do you create a simple FastAPI application?\nAnswer:To create a simple FastAPI application, first install\nFastAPI and Uvicorn. Then, create an instance of FastAPI in\na file (e.g., api.py) and set up routes using decorators.\nFinally, run the application using Uvicorn with a command\nlike `uvicorn api:app --port 8000 --reload`.\n7.Question\nWhat is the purpose of a .gitignore file, and what common\nentries should it contain?\nAnswer:.gitignore is used to specify files and directories that\nGit should ignore, ensuring sensitive or unnecessary files are\nnot tracked. Common entries include environment files",
+      "Contents\nPage\nChapter 1 Working with Docker images and repositories\n1\nWhat is a Docker image? . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n2\nListing Docker images . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n4\nPulling images . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n9\nSearching for images . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n10\nBuilding our own images . . . . . . . . . . . . . . . . . . . . . . . . . . . .\n12\nCreating a Docker Hub account . . . . . . . . . . . . . . . . . . . . . .\n13\nUsing Docker commit to create images . . . . . . . . . . . . . . . . .\n15\nBuilding images with a Dockerfile . . . . . . . . . . . . . . . . . . . .\n18\nBuilding the image from our Dockerfile . . . . . . . . . . . . . . . . .\n22\nWhat happens if an instruction fails?\n. . . . . . . . . . . . . . . . . .\n25\nDockerfiles and the build cache . . . . . . . . . . . . . . . . . . . . . .\n27"
+    ],
+    "retrieved_source_ids": [
+      "document_15_chunk_6",
+      "document_9_chunk_59",
+      "document_15_chunk_2"
+    ],
+    "retrieved_documents": [
+      "TheDockerBook_sample.pdf",
+      "Building Python Web Apis With Fastapi PDF.pdf"
+    ]
+  },
+  {
+    "question": "What is the difference between a Docker image and a container?",
+    "expected_document": "TheDockerBook_sample.pdf",
+    "answer": "A Docker image is made up of filesystems layered over each other, while a container is a read-write filesystem mounted on top of any layers below.",
+    "citations": [
+      "document_15_chunk_6",
+      "document_15_chunk_8"
+    ],
+    "retrieved_contexts": [
+      "Chapter 1: Working with Docker images and repositories\nand share your own images. We’ll also examine the repositories that hold images\nand the registries that store repositories.\nWhat is a Docker image?\nLet’s continue our journey with Docker by learning a bit more about Docker im-\nages. A Docker image is made up of filesystems layered over each other. At the\nbase is a boot filesystem, bootfs, which resembles the typical Linux/Unix boot\nfilesystem. A Docker user will probably never interact with the boot filesystem.\nIndeed, when a container has booted, it is moved into memory, and the boot\nfilesystem is unmounted to free up the RAM used by the initrd disk image.\nSo far this looks pretty much like a typical Linux virtualization stack. Indeed,\nDocker next layers a root filesystem, rootfs, on top of the boot filesystem. This\nrootfs can be one or more operating systems (e.g., a Debian or Ubuntu filesys-\ntem).\nIn a more traditional Linux boot, the root filesystem is mounted read-only and",
+      "one another. The image below is called the parent image and you can traverse\neach layer until you reach the bottom of the image stack where the final image\nis called the base image. Finally, when a container is launched from an image,\nDocker mounts a read-write filesystem on top of any layers below. This is where\nwhatever processes we want our Docker container to run will execute.\nVersion: v18.09.2 (c2c5fa8)\n2",
+      "Chapter 1: Working with Docker images and repositories\nIt’s always a good idea to build a container from specific tags. That way we’ll know\nexactly what the source of our container is. There are differences, for example,\nbetween Ubuntu 16.04 and 18.04, so it would be useful to specifically state that\nwe’re using ubuntu:18.04 so we know exactly what we’re getting.\nThere are two types of repositories: user repositories, which contain images con-\ntributed by Docker users, and top-level repositories, which are controlled by the\npeople behind Docker.\nA user repository takes the form of a username and a repository name; for example,\njamtur01/puppet.\n• Username: jamtur01\n• Repository name: puppet\nAlternatively, a top-level repository only has a repository name like ubuntu. The\ntop-level repositories are managed by Docker Inc and by selected vendors who pro-\nvide curated base images that you can build upon (e.g., the Fedora team provides"
+    ],
+    "retrieved_source_ids": [
+      "document_15_chunk_6",
+      "document_15_chunk_8",
+      "document_15_chunk_17"
+    ],
+    "retrieved_documents": [
+      "TheDockerBook_sample.pdf"
+    ]
+  },
+  {
+    "question": "What is a Dockerfile used for?",
+    "expected_document": "TheDockerBook_sample.pdf",
+    "answer": "A Dockerfile contains a set of instructions for building a Docker image, which can then be deployed to run applications.",
+    "citations": [
+      "document_9_chunk_88",
+      "document_9_chunk_90"
+    ],
+    "retrieved_contexts": [
+      "all packages installed in the development environment.\n4.Question\nHow do we configure environment variables for the\nFastAPI application?\nAnswer:Environment variables can be injected during\ndeployment and should be kept out of version control\nsystems such as GitHub for security.\n5.Question\nWhat is Docker, and why is it useful for deploying\nFastAPI applications?\nAnswer:Docker is a containerization technology that allows\napplications to run in self-contained environments, making it\neasier to manage dependencies and ensure that applications\nwork across different environments.\n6.Question\nWhat is the purpose of a Dockerfile?\nAnswer:A Dockerfile contains a set of instructions for\nbuilding a Docker image, which can then be deployed to run\napplications.\n7.Question",
+      "stop the services.\n11.Question\nWhat are the benefits of using Docker images for\ndeploying applications?\nAnswer:Docker images provide consistency across different\nenvironments, reduce runtime issues related to dependencies,\nand enable easy scaling and deployment to various platforms.\n12.Question\nWhat alternative is suggested for hosting MongoDB when\ndeploying to serverless platforms?\nAnswer:For serverless platforms that do not support\ndeploying Docker containers for databases, it is suggested to\nhost the MongoDB database on MongoDB Atlas.\n13.Question\nWhat is a .dockerignore file, and why is it used?\nAnswer:A .dockerignore file specifies files and directories to\nexclude from the Docker image build context, reducing the\nsize of the Docker image and avoiding unnecessary files.\n14.Question\nWhat is the `CMD` command in a Dockerfile?",
+      "Chapter 1: Working with Docker images and repositories\nalso learned about using a Dockerfile to construct our own custom images. Fi-\nnally, we’ve discovered how to run our own local Docker registry and some hosted\nalternatives. This gives us the basis for starting to build services with Docker.\nWe’ll use this knowledge in the next chapter to see how we can integrate Docker\ninto a testing workflow and into a Continuous Integration lifecycle.\nVersion: v18.09.2 (c2c5fa8)\n70"
+    ],
+    "retrieved_source_ids": [
+      "document_9_chunk_88",
+      "document_9_chunk_90",
+      "document_15_chunk_119"
+    ],
+    "retrieved_documents": [
+      "Building Python Web Apis With Fastapi PDF.pdf",
+      "TheDockerBook_sample.pdf"
+    ]
+  },
+  {
+    "question": "What is the purpose of the docker build command?",
+    "expected_document": "TheDockerBook_sample.pdf",
+    "answer": "to build a new image from the instructions in the Dockerfile",
+    "citations": [
+      "document_15_chunk_35",
+      "document_9_chunk_89"
+    ],
+    "retrieved_contexts": [
+      "over docker commit because it provides a more repeatable, transparent, and idem-\npotent mechanism for creating images.\nOnce we have a Dockerfile we then use the docker build command to build a\nnew image from the instructions in the Dockerfile.\nOur first Dockerfile\nLet’s now create a directory and an initial Dockerfile. We’re going to build a\nDocker image that contains a simple web server.\nVersion: v18.09.2 (c2c5fa8)\n18",
+      "What command is used to build a Docker image?\nAnswer:The command `docker build -t <image-name> .` is\nused to build a Docker image from the instructions defined in\nthe current directory.\n8.Question\nWhat is a docker-compose file, and what does it do?\nAnswer:A docker-compose file (usually named\n`docker-compose.yml`) defines and manages multi-container\nDocker applications, allowing services to be easily started,\nstopped, and configured.\n9.Question\nHow do you verify that the FastAPI application is\nrunning successfully after deployment?\nAnswer:You can send a GET request to the application's\nendpoint (e.g., `http://localhost:8080/event/`) and check the\nresponse.\n10.Question\nWhat command is used to stop the services in a Docker\ndeployment?\nAnswer:The command `docker-compose down` is used to",
+      "using the `pip freeze` command. A sample requirements.txt\nis provided, listing essential packages.\nConfiguring Environment Variables\nEnvironment variables, elaborated in Chapter 6, must be\nhandled properly, ensuring they remain out of version control\nsystems.\nDeploying with Docker\nDocker enables containerization, allowing applications to run\nconsistently across environments. The chapter provides\ndetails on writing a Dockerfile specific for the FastAPI\napplication, describing each instruction, including setting the\nbase image, working directory, copying files, running\ncommands, and exposing ports.\nBuilding the Docker Image\nTo create the application image, the command `docker build\n-t event-planner-api .` is used, and the MongoDB image is\npulled for the database.\nInstall Bookey App to Unlock Full Text and\nAudio"
+    ],
+    "retrieved_source_ids": [
+      "document_15_chunk_35",
+      "document_9_chunk_89",
+      "document_9_chunk_46"
+    ],
+    "retrieved_documents": [
+      "TheDockerBook_sample.pdf",
+      "Building Python Web Apis With Fastapi PDF.pdf"
+    ]
+  },
+  {
+    "question": "What is the purpose of the docker run command?",
+    "expected_document": "TheDockerBook_sample.pdf",
+    "answer": "The docker run command is used to launch a container from a Docker image, allowing you to specify settings such as the working directory, entrypoint, and environment variables.",
+    "citations": [
+      "document_15_chunk_74",
+      "document_15_chunk_74"
+    ],
+    "retrieved_contexts": [
+      "applications?\nAnswer:Docker is a tool for containerizing applications,\nallowing you to package your app and its dependencies into a\nsingle container. This ensures consistency across different\nenvironments and simplifies deployment, as Docker images\ncan be easily shared and run anywhere.\n6.Question\nHow do you create a simple FastAPI application?\nAnswer:To create a simple FastAPI application, first install\nFastAPI and Uvicorn. Then, create an instance of FastAPI in\na file (e.g., api.py) and set up routes using decorators.\nFinally, run the application using Uvicorn with a command\nlike `uvicorn api:app --port 8000 --reload`.\n7.Question\nWhat is the purpose of a .gitignore file, and what common\nentries should it contain?\nAnswer:.gitignore is used to specify files and directories that\nGit should ignore, ensuring sensitive or unnecessary files are\nnot tracked. Common entries include environment files",
+      "Chapter 1: Working with Docker images and repositories\nthe docker run command with --entrypoint flag.\nWORKDIR\nThe WORKDIR instruction provides a way to set the working directory for the con-\ntainer and the ENTRYPOINT and/or CMD to be executed when a container is launched\nfrom the image.\nWe can use it to set the working directory for a series of instructions or for the\nfinal container. For example, to set the working directory for a specific instruction\nwe might:\nListing 1.56: Using the WORKDIR instruction\nWORKDIR /opt/webapp/db\nRUN bundle install\nWORKDIR /opt/webapp\nENTRYPOINT [ \"rackup\" ]\nHere we’ve changed into the /opt/webapp/db directory to run bundle install\nand then changed into the /opt/webapp directory prior to specifying our\nENTRYPOINT instruction of rackup.\nYou can override the working directory at runtime with the -w flag, for example:\nListing 1.57: Overriding the working directory\n$ sudo docker run -ti -w /var/log ubuntu pwd\n/var/log\nVersion: v18.09.2 (c2c5fa8)\n40",
+      "using the `pip freeze` command. A sample requirements.txt\nis provided, listing essential packages.\nConfiguring Environment Variables\nEnvironment variables, elaborated in Chapter 6, must be\nhandled properly, ensuring they remain out of version control\nsystems.\nDeploying with Docker\nDocker enables containerization, allowing applications to run\nconsistently across environments. The chapter provides\ndetails on writing a Dockerfile specific for the FastAPI\napplication, describing each instruction, including setting the\nbase image, working directory, copying files, running\ncommands, and exposing ports.\nBuilding the Docker Image\nTo create the application image, the command `docker build\n-t event-planner-api .` is used, and the MongoDB image is\npulled for the database.\nInstall Bookey App to Unlock Full Text and\nAudio"
+    ],
+    "retrieved_source_ids": [
+      "document_9_chunk_59",
+      "document_15_chunk_74",
+      "document_9_chunk_46"
+    ],
+    "retrieved_documents": [
+      "Building Python Web Apis With Fastapi PDF.pdf",
+      "TheDockerBook_sample.pdf"
+    ]
+  },
+  {
+    "question": "What is a variable in C++?",
+    "expected_document": "cpp_tutorial.pdf",
+    "answer": "A variable in C++ is a storage location that holds a value. It can be of different data types such as int, float, etc.",
+    "citations": [
+      "document_14_chunk_34",
+      "document_14_chunk_37"
+    ],
+    "retrieved_contexts": [
+      "The C++ Language Tutorial \n \n \n12 \n \n© cplusplus.com 2008. All rights reserved\nYour compiler may also include some additional specific reserved keywords. \n \nVery important: The C++ language is a \"case sensitive\" language. That means that an identifier written in capital \nletters is not equivalent to another one with the same name but written in small letters. Thus, for example, the \nRESULT variable is not the same as the result variable or the Result variable. These are three different variable \nidentifiers.  \nFundamental data types \nWhen programming, we store the variables in our computer's memory, but the computer has to know what kind of \ndata we want to store in them, since it is not going to occupy the same amount of memory to store a simple \nnumber than to store a single letter or a large number, and they are not going to be interpreted the same way.  \nThe memory in our computers is organized in bytes. A byte is the minimum amount of memory that we can",
+      "The C++ Language Tutorial \n \n \n14 \n \n© cplusplus.com 2008. All rights reserved\n// operating with variables \n \n#include <iostream> \nusing namespace std; \n \nint main () \n{ \n  // declaring variables: \n  int a, b; \n  int result; \n \n  // process: \n  a = 5; \n  b = 2; \n  a = a + 1; \n  result = a - b; \n \n  // print out the result: \n  cout << result; \n \n  // terminate the program: \n  return 0; \n} \n4 \nDo not worry if something else than the variable declarations themselves looks a bit strange to you. You will see \nthe rest in detail in coming sections.  \nScope of variables \nAll the variables that we intend to use in a program must have been declared with its type specifier in an earlier \npoint in the code, like we did in the previous code at the beginning of the body of the function main when we \ndeclared that a, b, and result were of type int.  \nA variable can be either of global or local scope. A global variable is a variable declared in the main body of the",
+      "The C++ Language Tutorial \n \n \n13 \n \n© cplusplus.com 2008. All rights reserved\nint a; \nfloat mynumber;\nThese are two valid declarations of variables. The first one declares a variable of type int with the identifier a. The \nsecond one declares a variable of type float with the identifier mynumber. Once declared, the variables a and \nmynumber can be used within the rest of their scope in the program.  \nIf you are going to declare more than one variable of the same type, you can declare all of them in a single \nstatement by separating their identifiers with commas. For example:  \nint a, b, c;\nThis declares three variables (a, b and c), all of them of type int, and has exactly the same meaning as:  \nint a;\nint b;\nint c;\nThe integer data types char, short, long and int can be either signed or unsigned depending on the range of \nnumbers needed to be represented. Signed types can represent both positive and negative values, whereas"
+    ],
+    "retrieved_source_ids": [
+      "document_14_chunk_30",
+      "document_14_chunk_37",
+      "document_14_chunk_34"
+    ],
+    "retrieved_documents": [
+      "cpp_tutorial.pdf"
+    ]
+  },
+  {
+    "question": "What is the difference between a pointer and a reference in C++?",
+    "expected_document": "cpp_tutorial.pdf",
+    "answer": "A pointer is a variable that stores the address of another variable, whereas a reference is an alias for an existing variable.",
+    "citations": [
+      "document_14_chunk_172",
+      "document_14_chunk_193"
+    ],
+    "retrieved_contexts": [
+      "The C++ Language Tutorial \n \n \n64 \n \n© cplusplus.com 2008. All rights reserved\nThe second statement copied to fred the content of variable andy (which is 25). This is a standard assignment \noperation, as we have done so many times before.  \nFinally, the third statement copies to ted not the value contained in andy but a reference to it (i.e., its address, \nwhich we have assumed to be 1776). The reason is that in this third assignment operation we have preceded the \nidentifier andy with the reference operator (&), so we were no longer referring to the value of andy but to its \nreference (its address in memory).  \nThe variable that stores the reference to another variable (like ted in the previous example) is what we call a \npointer. Pointers are a very powerful feature of the C++ language that has many uses in advanced programming. \nFarther ahead, we will see how this type of variable is used and declared.  \nDereference operator (*)",
+      "The C++ Language Tutorial \n \n \n71 \n \n© cplusplus.com 2008. All rights reserved\nPointers to pointers \nC++ allows the use of pointers that point to pointers, that these, in its turn, point to data (or even to other \npointers). In order to do that, we only need to add an asterisk (*) for each level of reference in their declarations:  \nchar a; \nchar * b; \nchar ** c;\na = 'z'; \nb = &a; \nc = &b; \nThis, supposing the randomly chosen memory locations for each variable of 7230, 8092 and 10502, could be \nrepresented as:  \n \nThe value of each variable is written inside each cell; under the cells are their respective addresses in memory.  \nThe new thing in this example is variable c, which can be used in three different levels of indirection, each one of \nthem would correspond to a different value:  \n• \nc has type char** and a value of 8092  \n• \n*c has type char* and a value of 7230  \n• \n**c has type char and a value of 'z'  \nvoid pointers",
+      "byte long.  \nNull pointer \nA null pointer is a regular pointer of any pointer type which has a special value that indicates that it is not pointing \nto any valid reference or memory address. This value is the result of type-casting the integer value zero to any \npointer type.  \nint * p; \np = 0;     // p has a null pointer value \nDo not confuse null pointers with void pointers. A null pointer is a value that any pointer may take to represent \nthat it is pointing to \"nowhere\", while a void pointer is a special type of pointer that can point to somewhere \nwithout a specific type. One refers to the value stored in the pointer itself and the other to the type of data it points \nto.  \nPointers to functions \nC++ allows operations with pointers to functions. The typical use of this is for passing a function as an argument to \nanother function, since these cannot be passed dereferenced. In order to declare a pointer to a function we have to"
+    ],
+    "retrieved_source_ids": [
+      "document_14_chunk_172",
+      "document_14_chunk_193",
+      "document_14_chunk_196"
+    ],
+    "retrieved_documents": [
+      "cpp_tutorial.pdf"
+    ]
+  },
+  {
+    "question": "What is a class in C++?",
+    "expected_document": "cpp_tutorial.pdf",
+    "answer": "A class is an expanded concept of a data structure: instead of holding only data, it can hold both data and functions.",
+    "citations": [
+      "document_14_chunk_229"
+    ],
+    "retrieved_contexts": [
+      "The C++ Language Tutorial \n \n \n86 \n \n© cplusplus.com 2008. All rights reserved\nObject Oriented Programming \nClasses (I) \nA class is an expanded concept of a data structure: instead of holding only data, it can hold both data and \nfunctions.  \nAn object is an instantiation of a class. In terms of variables, a class would be the type, and an object would be the \nvariable.  \nClasses are generally declared using the keyword class, with the following format:  \nclass class_name { \n  access_specifier_1: \n    member1; \n  access_specifier_2: \n    member2; \n  ... \n  } object_names; \nWhere class_name is a valid identifier for the class, object_names is an optional list of names for objects of this \nclass. The body of the declaration can contain members, that can be either data or function declarations, and \noptionally access specifiers.  \nAll is very similar to the declaration on data structures, except that we can now include also functions and",
+      "Classes defined with struct and union \nClasses can be defined not only with keyword class, but also with keywords struct and union.  \nThe concepts of class and data structure are so similar that both keywords (struct and class) can be used in C++ \nto declare classes (i.e. structs can also have function members in C++, not only data members). The only \ndifference between both is that members of classes declared with the keyword struct have public access by \ndefault, while members of classes declared with the keyword class have private access. For all other purposes \nboth keywords are equivalent.",
+      "The C++ Language Tutorial \n \n \n138 \n \n© cplusplus.com 2008. All rights reserved\nC++ Standard Library \nInput/Output with files \nC++ provides the following classes to perform output and input of characters to/from files:  \n• \nofstream: Stream class to write on files  \n• \nifstream: Stream class to read from files  \n• \nfstream: Stream class to both read and write from/to files.  \nThese classes are derived directly or indirectly from the classes istream, and ostream. We have already used \nobjects whose types were these classes: cin is an object of class istream and cout is an object of class ostream. \nTherfore, we have already been using classes that are related to our file streams. And in fact, we can use our file \nstreams the same way we are already used to use cin and cout, with the only difference that we have to associate \nthese streams with physical files. Let's see an example:  \n// basic file operations \n#include <iostream> \n#include <fstream> \nusing namespace std; \n \nint main () {"
+    ],
+    "retrieved_source_ids": [
+      "document_14_chunk_229",
+      "document_14_chunk_253",
+      "document_14_chunk_366"
+    ],
+    "retrieved_documents": [
+      "cpp_tutorial.pdf"
+    ]
+  },
+  {
+    "question": "What is an object in C++?",
+    "expected_document": "cpp_tutorial.pdf",
+    "answer": "An object is an instantiation of a class. In terms of variables, a class would be the type, and an object would be the variable.",
+    "citations": [
+      "document_14_chunk_229"
+    ],
+    "retrieved_contexts": [
+      "The C++ Language Tutorial \n \n \n86 \n \n© cplusplus.com 2008. All rights reserved\nObject Oriented Programming \nClasses (I) \nA class is an expanded concept of a data structure: instead of holding only data, it can hold both data and \nfunctions.  \nAn object is an instantiation of a class. In terms of variables, a class would be the type, and an object would be the \nvariable.  \nClasses are generally declared using the keyword class, with the following format:  \nclass class_name { \n  access_specifier_1: \n    member1; \n  access_specifier_2: \n    member2; \n  ... \n  } object_names; \nWhere class_name is a valid identifier for the class, object_names is an optional list of names for objects of this \nclass. The body of the declaration can contain members, that can be either data or function declarations, and \noptionally access specifiers.  \nAll is very similar to the declaration on data structures, except that we can now include also functions and",
+      "The C++ Language Tutorial \n \n \n29 \n \n© cplusplus.com 2008. All rights reserved\nBasic Input/Output \nUntil now, the example programs of previous sections provided very little interaction with the user, if any at all. \nUsing the standard input and output library, we will be able to interact with the user by printing messages on the \nscreen and getting the user's input from the keyboard.  \nC++ uses a convenient abstraction called streams to perform input and output operations in sequential media such \nas the screen or the keyboard. A stream is an object where a program can either insert or extract characters \nto/from it. We do not really need to care about many specifications about the physical media associated with the \nstream - we only need to know it will accept or provide characters sequentially.  \nThe standard C++ library includes the header file iostream, where the standard input and output stream objects \nare declared.  \nStandard Output (cout)",
+      "The C++ Language Tutorial \n \n \n88 \n \n© cplusplus.com 2008. All rights reserved\nclass. This makes sense, since we have already defined a member function to set values for those members within \nthe object: the member function set_values(). Therefore, the rest of the program does not need to have direct \naccess to them. Perhaps in a so simple example as this, it is difficult to see an utility in protecting those two \nvariables, but in greater projects it may be very important that values cannot be modified in an unexpected way \n(unexpected from the point of view of the object).  \nOne of the greater advantages of a class is that, as any other type, we can declare several objects of it. For \nexample, following with the previous example of class CRectangle, we could have declared the object rectb in \naddition to the object rect:  \n// example: one class, two objects \n#include <iostream> \nusing namespace std; \n \nclass CRectangle { \n    int x, y; \n  public: \n    void set_values (int,int);"
+    ],
+    "retrieved_source_ids": [
+      "document_14_chunk_229",
+      "document_14_chunk_76",
+      "document_14_chunk_236"
+    ],
+    "retrieved_documents": [
+      "cpp_tutorial.pdf"
+    ]
+  },
+  {
+    "question": "What is inheritance in C++?",
+    "expected_document": "cpp_tutorial.pdf",
+    "answer": "Inheritance allows to create classes which are derived from other classes, so that they automatically include some of its 'parent's' members, plus its own.",
+    "citations": [
+      "document_14_chunk_275"
+    ],
+    "retrieved_contexts": [
+      "which when it is a son object. The difference is because the constructor declaration of daughter and son:  \ndaughter (int a)          // nothing specified: call default \nson (int a) : mother (a)  // constructor specified: call this \nMultiple inheritance \nIn C++ it is perfectly possible that a class inherits members from more than one class. This is done by simply \nseparating the different base classes with commas in the derived class declaration. For example, if we had a \nspecific class to print on screen (COutput) and we wanted our classes CRectangle and CTriangle to also inherit its \nmembers in addition to those of CPolygon we could write:  \nclass CRectangle: public CPolygon, public COutput;\nclass CTriangle: public CPolygon, public COutput; \nhere is the complete example:",
+      "considered as a friend class by CSquare, but CRectangle does not consider CSquare to be a friend, so CRectangle \ncan access the protected and private members of CSquare but not the reverse way. Of course, we could have \ndeclared also CSquare as friend of CRectangle if we wanted to.  \nAnother property of friendships is that they are not transitive: The friend of a friend is not considered to be a friend \nunless explicitly specified.  \nInheritance between classes \nA key feature of C++ classes is inheritance. Inheritance allows to create classes which are derived from other \nclasses, so that they automatically include some of its \"parent's\" members, plus its own. For example, we are going",
+      "What is inherited from the base class? \nIn principle, a derived class inherits every member of a base class except:  \n• \nits constructor and its destructor  \n• \nits operator=() members  \n• \nits friends  \nAlthough the constructors and destructors of the base class are not inherited themselves, its default constructor \n(i.e., its constructor with no parameters) and its destructor are always called when a new object of a derived class \nis created or destroyed.  \nIf the base class has no default constructor or you want that an overloaded constructor is called when a new \nderived object is created, you can specify it in each constructor definition of the derived class:  \nderived_constructor_name (parameters) : base_constructor_name (parameters) {...} \nFor example:"
+    ],
+    "retrieved_source_ids": [
+      "document_14_chunk_285",
+      "document_14_chunk_275",
+      "document_14_chunk_283"
+    ],
+    "retrieved_documents": [
+      "cpp_tutorial.pdf"
+    ]
+  },
+  {
+    "question": "What is polymorphism in C++?",
+    "expected_document": "cpp_tutorial.pdf",
+    "answer": "the art of taking advantage of the pointer compatibility property between a derived class and its base class",
+    "citations": [
+      "document_14_chunk_287"
+    ],
+    "retrieved_contexts": [
+      "The C++ Language Tutorial \n \n \n107 \n \n© cplusplus.com 2008. All rights reserved\nPolymorphism \nBefore getting into this section, it is recommended that you have a proper understanding of pointers and class \ninheritance. If any of the following statements seem strange to you, you should review the indicated sections:  \nStatement: \nExplained in: \nint a::b(c) {}; \nClasses \na->b \nData Structures \nclass a: public b; Friendship and inheritance\nPointers to base class \nOne of the key features of derived classes is that a pointer to a derived class is type-compatible with a pointer to \nits base class. Polymorphism is the art of taking advantage of this simple but powerful and versatile feature, that \nbrings Object Oriented Methodologies to its full potential.  \nWe are going to start by rewriting our program about the rectangle and the triangle of the previous section taking \ninto consideration this pointer compatibility property:  \n// pointers to base class \n#include <iostream>",
+      "The C++ Language Tutorial \n \n \n112 \n \n© cplusplus.com 2008. All rights reserved\n// dynamic allocation and polymorphism \n#include <iostream> \nusing namespace std; \n \nclass CPolygon { \n  protected: \n    int width, height; \n  public: \n    void set_values (int a, int b) \n      { width=a; height=b; } \n    virtual int area (void) =0; \n    void printarea (void) \n      { cout << this->area() << endl; } \n  }; \n \nclass CRectangle: public CPolygon { \n  public: \n    int area (void) \n      { return (width * height); } \n  }; \n \nclass CTriangle: public CPolygon { \n  public: \n    int area (void) \n      { return (width * height / 2); } \n  }; \n \nint main () { \n  CPolygon * ppoly1 = new CRectangle; \n  CPolygon * ppoly2 = new CTriangle; \n  ppoly1->set_values (4,5); \n  ppoly2->set_values (4,5); \n  ppoly1->printarea(); \n  ppoly2->printarea(); \n  delete ppoly1; \n  delete ppoly2; \n  return 0; \n} \n20 \n10 \nNotice that the ppoly pointers:  \nCPolygon * ppoly1 = new CRectangle;\nCPolygon * ppoly2 = new CTriangle;",
+      "The C++ Language Tutorial \n \n \n109 \n \n© cplusplus.com 2008. All rights reserved\nTherefore, what the virtual keyword does is to allow a member of a derived class with the same name as one in \nthe base class to be appropriately called from a pointer, and more precisely when the type of the pointer is a \npointer to the base class but is pointing to an object of the derived class, as in the above example.  \nA class that declares or inherits a virtual function is called a polymorphic class.  \nNote that despite of its virtuality, we have also been able to declare an object of type CPolygon and to call its own \narea() function, which always returns 0.  \nAbstract base classes \nAbstract base classes are something very similar to our CPolygon class of our previous example. The only \ndifference is that in our previous example we have defined a valid area() function with a minimal functionality for"
+    ],
+    "retrieved_source_ids": [
+      "document_14_chunk_287",
+      "document_14_chunk_300",
+      "document_14_chunk_293"
+    ],
+    "retrieved_documents": [
+      "cpp_tutorial.pdf"
+    ]
+  },
+  {
+    "question": "What is a constructor in C++?",
+    "expected_document": "cpp_tutorial.pdf",
+    "answer": "A constructor is a special member function in C++ that is used to initialize objects when they are created.",
+    "citations": [
+      "document_14_chunk_241",
+      "document_14_chunk_248",
+      "document_14_chunk_261"
+    ],
+    "retrieved_contexts": [
+      "The C++ Language Tutorial \n \n \n97 \n \n© cplusplus.com 2008. All rights reserved\nCVector c;\nincluded in main() would not have been valid.  \nAnyway, I have to warn you that an empty block is a bad implementation for a constructor, since it does not fulfill \nthe minimum functionality that is generally expected from a constructor, which is the initialization of all the \nmember variables in its class. In our case this constructor leaves the variables x and y undefined. Therefore, a \nmore advisable definition would have been something similar to this:  \nCVector () { x=0; y=0; };\nwhich in order to simplify and show only the point of the code I have not included in the example.  \nAs well as a class includes a default constructor and a copy constructor even if they are not declared, it also \nincludes a default definition for the assignment operator (=) with the class itself as parameter. The behavior which",
+      "The C++ Language Tutorial \n \n \n92 \n \n© cplusplus.com 2008. All rights reserved\nclass CExample { \n  public: \n    int a,b,c; \n    CExample (int n, int m) { a=n; b=m; };\n    void multiply () { c=a*b; }; \n  }; \nHere we have declared a constructor that takes two parameters of type int. Therefore the following object \ndeclaration would be correct:  \nCExample ex (2,3);\nBut, \nCExample ex;\nWould not be correct, since we have declared the class to have an explicit constructor, thus replacing the default \nconstructor.  \nBut the compiler not only creates a default constructor for you if you do not specify your own. It provides three \nspecial member functions in total that are implicitly declared if you do not declare your own. These are the copy \nconstructor, the copy assignment operator, and the default destructor.  \nThe copy constructor and the copy assignment operator copy all the data contained in another object to the data",
+      "values of x and y with the parameters that are passed to it.  \nNotice how these arguments are passed to the constructor at the moment at which the objects of this class are \ncreated:  \nCRectangle rect (3,4); \nCRectangle rectb (5,6); \nConstructors cannot be called explicitly as if they were regular member functions. They are only executed when a \nnew object of that class is created.  \nYou can also see how neither the constructor prototype declaration (within the class) nor the latter constructor \ndefinition include a return value; not even void.  \nThe destructor fulfills the opposite functionality. It is automatically called when an object is destroyed, either \nbecause its scope of existence has finished (for example, if it was defined as a local object within a function and the \nfunction ends) or because it is an object dynamically assigned and it is released using the operator delete."
+    ],
+    "retrieved_source_ids": [
+      "document_14_chunk_261",
+      "document_14_chunk_248",
+      "document_14_chunk_241"
+    ],
+    "retrieved_documents": [
+      "cpp_tutorial.pdf"
+    ]
+  },
+  {
+    "question": "What is the monthly salary of the author of the Python documentation?",
+    "expected_document": null,
+    "answer": "I couldn't find that information in the uploaded documents.",
+    "citations": [],
+    "retrieved_contexts": [
+      "Python Guide Documentation\nRelease 0.0.1\nKenneth Reitz\nJuly 06, 2018",
+      "Python Guide Documentation, Release 0.0.1\nPurpose\nThe Hitchhiker’s Guide to Python exists to provide both novice and expert Python developers a best practice handbook\nfor the installation, conﬁguration, and usage of Python on a daily basis.\nBy the Community\nThis guide is architected and maintained by Kenneth Reitz in an open fashion. This is a community-driven effort that\nserves one purpose: to serve the community.\nFor the Community\nAll contributions to the Guide are welcome, from Pythonistas of all levels. If you think there’s a gap in what the Guide\ncovers, fork the Guide on GitHub and submit a pull request.\nContributions are welcome from everyone, whether they’re an old hand or a ﬁrst-time Pythonista, and the authors\nto the Guide will gladly help if you have any questions about the appropriateness, completeness, or accuracy of a\ncontribution.\nTo get started working on The Hitchhiker’s Guide, see the Contribute page.\nThe Community\nBDFL",
+      "Python Guide Documentation, Release 0.0.1\nPython Cookbook\nPython Cookbook, written by David Beazley and Brian K. Jones, is packed with practical recipes. This book covers\nthe core python language as well as tasks common to a wide variety of application domains.\nPython Cookbook\nWriting Idiomatic Python\n“Writing Idiomatic Python”, written by Jeff Knupp, contains the most common and important Python idioms in a\nformat that maximizes identiﬁcation and understanding. Each idiom is presented as a recommendation of a way to\nwrite some commonly used piece of code, followed by an explanation of why the idiom is important. It also contains\ntwo code samples for each idiom: the “Harmful” way to write it and the “Idiomatic” way.\nFor Python 2.7.3+\nFor Python 3.3+\nDocumentation\nOfﬁcial Documentation\nThe ofﬁcial Python Language and Library documentation can be found here:\n• Python 2.x\n• Python 3.x\nRead the Docs"
+    ],
+    "retrieved_source_ids": [
+      "document_10_chunk_0",
+      "document_10_chunk_319",
+      "document_10_chunk_339"
+    ],
+    "retrieved_documents": [
+      "python-docs-readthedocs-io-en-latest.pdf"
+    ]
+  },
+  {
+    "question": "What is the bank account number of the author of the PostgreSQL notes?",
+    "expected_document": null,
+    "answer": "I couldn't find that information in the uploaded documents.",
+    "citations": [],
+    "retrieved_contexts": [
+      "postgres notes\n(continued from previous page)\n-3\n(1 row)\n2.3. Value Expressions\n27",
+      "postgres notes\nStudy notes based on the PostgreSQL docs. Feel free to use.\nPostgreSQL is released under the PostgreSQL License.\nCONTENTS:\n1",
+      "postgres notes\n7.4. String Functions & Operators\n89"
+    ],
+    "retrieved_source_ids": [
+      "document_11_chunk_62",
+      "document_11_chunk_6",
+      "document_11_chunk_199"
+    ],
+    "retrieved_documents": [
+      "postgres-notes-readthedocs-io-en-latest.pdf"
+    ]
+  },
+  {
+    "question": "What is the personal phone number of the FastAPI developer mentioned in the document?",
+    "expected_document": null,
+    "answer": "I couldn't find that information in the uploaded documents.",
+    "citations": [],
+    "retrieved_contexts": [
+      "Best Quotes from Building Python Web\nApis With Fastapi by Abdulazeez\nAbdulazeez Adeshina with Page\nNumbers\nView on Bookey Website and Generate Beautiful Quote Images\nChapter 1 | Quotes From Pages 36-82\n1.FastAPI is the Python web framework that we are\ngoing to use in this book.\n2.FastAPI is relatively new, but it has a growing community.\n3.An understanding of the technologies previously\nmentioned is required to build a full-blown FastAPI\napplication.\n4.To enable tracking of files, a file must first be added and\ncommitted.\n5.Branches are an important feature that enables developers\nto easily work on different application features, bugs, and\nso on, separately before merging into the main branch.\n6.A virtual environment is an isolated environment where\napplication dependencies installed can only be accessed",
+      "Run Application:\n Use `uvicorn api:app --port 8000 --reload`.\nConclusion\nThis chapter introduced the tools required to start developing\nwith FastAPI and provided a simple application to solidify\nunderstanding. In the next chapter, more on routing in\nFastAPI and building a CRUD application will be covered.",
+      "Building a Simple FastAPI\nApplication\n            \n                Activate the environment: `$ source venv/bin/activate`.\n                Install Dependencies: `pip install fastapi uvicorn`.\n                Create API: Define routes and handlers.\n                Run Application: `uvicorn api:app --port 8000 --reload`.\n            \n        \nConclusion\nIntroduced tools for FastAPI development; a simple app aids understanding, with upcoming\ntopics on routing and building a CRUD app.\nChapter 1: Getting Started with FastAPI\nOverview of FastAPI\nFastAPI is a modern, lightweight Python web framework that"
+    ],
+    "retrieved_source_ids": [
+      "document_9_chunk_47",
+      "document_9_chunk_13",
+      "document_9_chunk_8"
+    ],
+    "retrieved_documents": [
+      "Building Python Web Apis With Fastapi PDF.pdf"
+    ]
+  },
+  {
+    "question": "What is the Docker tutorial author's annual salary?",
+    "expected_document": null,
+    "answer": "I couldn't find that information in the uploaded documents.",
+    "citations": [],
+    "retrieved_contexts": [
+      "The Docker Book\nJames Turnbull\nAugust 26, 2019\nVersion: v18.09.2 (c2c5fa8)\nWebsite: The Docker Book",
+      "NOTE The Dockerfile also supports comments. Any line that starts with\na # is considered a comment. You can see an example of this in the first line of\nour Dockerfile.\nThe first instruction in a Dockerfile must be FROM. The FROM instruction specifies\nan existing image that the following instructions will operate on; this image is\ncalled the base image.\nIn our sample Dockerfile we’ve specified the ubuntu:18.04 image as our base\nimage. This specification will build an image on top of an Ubuntu 18.04 base\noperating system. As with running a container, you should always be specific\nabout exactly from which base image you are building.\nNext, we’ve specified the LABEL instruction with a value of ‘maintainer=“james@example.com”,\nwhich tells Docker who the author of the image is and what their email address\nis. This is useful for specifying an owner and contact for an image.\nVersion: v18.09.2 (c2c5fa8)\n20",
+      "applications, employing pytest and its fixtures. The chapter\nprepares developers for publishing applications, with the\nupcoming chapter focused on deployment strategies using\nDocker and docker-compose."
+    ],
+    "retrieved_source_ids": [
+      "document_15_chunk_0",
+      "document_15_chunk_39",
+      "document_9_chunk_44"
+    ],
+    "retrieved_documents": [
+      "TheDockerBook_sample.pdf",
+      "Building Python Web Apis With Fastapi PDF.pdf"
+    ]
+  },
+  {
+    "question": "What is the C++ tutorial author's home address?",
+    "expected_document": null,
+    "answer": "I couldn't find that information in the uploaded documents.",
+    "citations": [],
+    "retrieved_contexts": [
+      "The C++ Language Tutorial \n \n \n137 \n \n© cplusplus.com 2008. All rights reserved\n// standard macro names \n#include <iostream> \nusing namespace std; \n \nint main() \n{ \n  cout << \"This is the line number \" << __LINE__; \n  cout << \" of file \" << __FILE__ << \".\\n\"; \n  cout << \"Its compilation began \" << __DATE__; \n  cout << \" at \" << __TIME__ << \".\\n\"; \n  cout << \"The compiler gives a __cplusplus value of \"; \n  cout << __cplusplus; \n  return 0; \n} \nThis is the line number 7 of file \n/home/jay/stdmacronames.cpp. \nIts compilation began Nov  1 2005 at \n10:12:29. \nThe compiler gives a __cplusplus value \nof 1",
+      "The C++ Language Tutorial \n \n \n64 \n \n© cplusplus.com 2008. All rights reserved\nThe second statement copied to fred the content of variable andy (which is 25). This is a standard assignment \noperation, as we have done so many times before.  \nFinally, the third statement copies to ted not the value contained in andy but a reference to it (i.e., its address, \nwhich we have assumed to be 1776). The reason is that in this third assignment operation we have preceded the \nidentifier andy with the reference operator (&), so we were no longer referring to the value of andy but to its \nreference (its address in memory).  \nThe variable that stores the reference to another variable (like ted in the previous example) is what we call a \npointer. Pointers are a very powerful feature of the C++ language that has many uses in advanced programming. \nFarther ahead, we will see how this type of variable is used and declared.  \nDereference operator (*)",
+      "The C++ Language Tutorial \n \n \n3 \n \n© cplusplus.com 2008. All rights reserved\nTable of contents \nTable of contents ...............................................................................................................................3 \nIntroduction ......................................................................................................................................5 \nInstructions for use ................................................................................................................................... 5 \nBasics of C++ ......................................................................................................................................7 \nStructure of a program ............................................................................................................................. 7"
+    ],
+    "retrieved_source_ids": [
+      "document_14_chunk_365",
+      "document_14_chunk_172",
+      "document_14_chunk_2"
+    ],
+    "retrieved_documents": [
+      "cpp_tutorial.pdf"
+    ]
+  }
+]
