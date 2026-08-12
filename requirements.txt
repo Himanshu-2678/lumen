@@ -20,3 +20,6 @@ chromadb
 
 rank-bm25
 alembic
+
+ragas
+langchain-google-vertexai
