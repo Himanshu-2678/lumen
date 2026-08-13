@@ -1,8 +1,14 @@
 from sentence_transformers import CrossEncoder
 
-model = CrossEncoder(
-    "cross-encoder/ms-marco-MiniLM-L-6-v2"
-)
+_model = None
+
+def get_reranker_model():
+    global _model
+
+    if _model is None:
+        _model = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
+
+    return _model
 
 
 def rerank_chunks(
@@ -13,19 +19,26 @@ def rerank_chunks(
     if not retrieved_chunks:
         return []
 
+    model = get_reranker_model()
+
     sentence_pairs = [
-        (query, chunk["text"])
+        (query, chunk.get("text", ""))
         for chunk in retrieved_chunks
     ]
 
     scores = model.predict(sentence_pairs)
 
-    for chunk, score in zip(retrieved_chunks, scores):
-        chunk["reranker_score"] = float(score)
+    reranked_chunks = []
 
-    retrieved_chunks.sort(
+    for chunk, score in zip(retrieved_chunks, scores):
+        reranked_chunks.append({
+            **chunk,
+            "reranker_score": float(score),
+        })
+
+    reranked_chunks.sort(
         key=lambda chunk: chunk["reranker_score"],
         reverse=True,
     )
 
-    return retrieved_chunks[:top_k]
+    return reranked_chunks[:top_k]
