@@ -1,6 +1,5 @@
 from app.services.embedding_service import model
 from app.vectorstore.chroma_client import collection
-from app.services.reranker_service import rerank_chunks
 
 def generate_query_embedding(query: str):
     return model.encode(
@@ -8,20 +7,18 @@ def generate_query_embedding(query: str):
         normalize_embeddings=True,
     ).tolist()
 
-
-def vector_search(query_embedding, top_k: int = 20, document_id: int | None = None, filename: str | None = None,):
-
+def vector_search(
+    query_embedding,
+    top_k: int = 20,
+    document_id: int | None = None,
+    filename: str | None = None,
+):
     where = None
 
     if document_id is not None:
-        where = {
-            "document_id": document_id
-        }
-
+        where = {"document_id": document_id}
     elif filename is not None:
-        where = {
-            "filename": filename
-        }
+        where = {"filename": filename}
 
     return collection.query(
         query_embeddings=[query_embedding],
@@ -43,6 +40,9 @@ def retrieve_chunks(
         document_id=document_id,
         filename=filename,
     )
+
+    if not results["ids"] or not results["ids"][0]:
+        return []
 
     retrieved_chunks = [
         {
