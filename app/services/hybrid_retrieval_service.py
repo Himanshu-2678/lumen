@@ -11,43 +11,35 @@ def hybrid_search(
     bm25_top_k: int = 20,
     final_top_k: int = 5,
 ):
+    # Semantic Retrieval
+    vector_results = retrieve_chunks(query=query, top_k=vector_top_k)
+
+    # Keyword Retrieval
     db = SessionLocal()
-
     try:
-        # Semantic Retrieval
-        vector_results = retrieve_chunks(
-            query=query,
-            top_k=vector_top_k,
-        )
-
-        # Keyword Retrieval
-        bm25_results = bm25_search(
-            db=db,
-            query=query,
-            top_k=bm25_top_k,
-        )
-
+        bm25_results = bm25_search(db=db, query=query, top_k=bm25_top_k)
     finally:
         db.close()
 
-    # Merge results (remove duplicates)
     merged = {}
 
     for chunk in vector_results:
-        chunk["retrieval_method"] = ["vector"]
-        merged[chunk["id"]] = chunk
+        merged[chunk["id"]] = {
+            **chunk,
+            "retrieval_method": ["vector"],
+        }
 
     for chunk in bm25_results:
-
         if chunk["id"] in merged:
             merged[chunk["id"]]["retrieval_method"].append("bm25")
         else:
-            chunk["retrieval_method"] = ["bm25"]
-            merged[chunk["id"]] = chunk
+            merged[chunk["id"]] = {
+                **chunk,
+                "retrieval_method": ["bm25"],
+            }
 
     merged_chunks = list(merged.values())
 
-    # Final reranking
     final_chunks = rerank_chunks(
         query=query,
         retrieved_chunks=merged_chunks,
