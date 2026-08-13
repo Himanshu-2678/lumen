@@ -7,11 +7,10 @@ class DocumentResponse(BaseModel):
     filename: str
     file_type: str
     status: str
-    file_path: str
     chunk_count: int
-    error_message: str | None
-    created_at: datetime | None
-    updated_at: datetime | None
+    error_message: str | None = None
+    created_at: datetime | None = None
+    updated_at: datetime | None = None
 
     model_config = {
         "from_attributes": True
