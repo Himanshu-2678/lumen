@@ -8,21 +8,17 @@ from app.api.query import router as query_router
 router = APIRouter()
 
 router.include_router(
-    query_router,
-    tags=["Query"]
-    )
-
-router.include_router(
-    health_router,
-    tags=["Health"]
+    health_router
 )
 
 router.include_router(
-    document_router,
-    tags=["Documents"]
+    document_router
 )
 
 router.include_router(
-    upload_router,
-    tags=["Upload"]
+    upload_router
+)
+
+router.include_router(
+    query_router
 )
