@@ -8,6 +8,7 @@ from app.services.llm_service import generate_answer
 from app.schemas.query import QueryResponse
 from app.services.citation_service import build_citations
 from app.services.answer_guard_service import can_generate_answer
+from app.services.reranker_service import rerank_chunks
 
 router = APIRouter(prefix="/query", tags=["Query"])
 
@@ -19,6 +20,8 @@ class QueryRequest(BaseModel):
 @router.post("/", response_model=QueryResponse)
 def query_documents(request: QueryRequest):
     retrieved_chunks = hybrid_search(query=request.question)
+
+    retrieved_chunks = rerank_chunks(query=request.question, retrieved_chunks=retrieved_chunks, top_k=5)
 
     confidence = calculate_confidence(retrieved_chunks)
 
