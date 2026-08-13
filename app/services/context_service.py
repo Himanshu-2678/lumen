@@ -1,18 +1,27 @@
-def build_context(retrieved_chunks: list[dict]) -> str:
-    contexts = []
+MAX_CONTEXT_CHARS = 12000
 
-    for index, chunk in enumerate(retrieved_chunks, start=1):
-        metadata = chunk["metadata"]
+def build_context(
+    retrieved_chunks: list[dict],
+) -> str:
+    contexts = []
+    total_length = 0
+
+    for chunk in retrieved_chunks:
+        metadata = chunk.get("metadata", {})
 
         context = f"""
-        [Source ID: {chunk["id"]}]
-        Document: {metadata["filename"]}
-        Page: {metadata["page_number"]}
+[Source ID: {chunk.get("id")}]
+Document: {metadata.get("filename", "unknown")}
+Page: {metadata.get("page_number", 0)}
 
-        Evidence:
-        {chunk["text"]}
-        """
+Evidence:
+{chunk.get("text", "")}
+"""
+
+        if total_length + len(context) > MAX_CONTEXT_CHARS:
+            break
 
         contexts.append(context)
+        total_length += len(context)
 
     return "\n\n".join(contexts)
