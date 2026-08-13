@@ -1,5 +1,4 @@
 def can_generate_answer(confidence: dict) -> bool:
-    if confidence["confidence_level"] == "low":
-        return False
+    score = confidence.get("confidence_score", 0.0)
 
-    return True
+    return score >= 0.45
