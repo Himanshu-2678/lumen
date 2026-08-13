@@ -1,5 +1,6 @@
 from sqlalchemy.orm import Session
 
+from app.core.logging import logger
 from app.services.pdf_parser_service import extract_text_from_pdf
 from app.services.chunking_service import chunk_pages
 from app.services.metadata_services import enrich_chunk_metadata
@@ -21,34 +22,31 @@ def ingest_document(
     1. Parse PDF
     2. Create chunks
     3. Add metadata
-    4. Save chunks to PostgreSQL
+    4. Save chunks to database
     5. Generate embeddings
     6. Store vectors in ChromaDB
     """
-    
-    # Parse PDF
+    logger.info(f"Starting ingestion for document {document_id}")
+
     pages = extract_text_from_pdf(file_path)
+    logger.info(f"Extracted {len(pages)} pages")
 
-    # Chunk pages
     chunks = chunk_pages(pages)
+    logger.info(f"Created {len(chunks)} chunks")
 
-    # Add metadata
     chunks = enrich_chunk_metadata(
         chunks=chunks,
         document_id=document_id,
         filename=filename,
     )
 
-    # Save chunks to PostgreSQL
-    save_chunks(
-        db=db,
-        chunks=chunks,
-    )
+    save_chunks(db=db, chunks=chunks)
+    logger.info("Chunks saved to database")
 
-    # Generate embeddings
     chunks = generate_embeddings(chunks)
+    logger.info("Embeddings generated")
 
-    # Store vectors in ChromaDB
     add_chunks_to_vector_store(chunks)
+    logger.info("Vectors stored successfully")
 
     return len(chunks)
