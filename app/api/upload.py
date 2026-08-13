@@ -5,7 +5,7 @@ from app.db.dependencies import get_db
 from app.schemas.document import DocumentResponse
 from app.services.document_upload_service import upload_document
 
-router = APIRouter()
+router = APIRouter(prefix="/documents", tags=["Documents"])
 
 @router.post(
     "/upload",
