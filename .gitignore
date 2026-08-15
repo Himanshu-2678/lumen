@@ -7,3 +7,5 @@ test.py
 /chroma_db
 /tests
 cleanup.py
+__pycache__/
+*.pyc
