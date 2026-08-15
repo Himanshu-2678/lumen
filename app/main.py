@@ -1,8 +1,13 @@
+from pathlib import Path
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
+
+from app.api.router import router
 from app.core.config import settings
 from app.core.logging import logger
-from app.api.router import router
 
 logger.info("Starting Application...")
 
@@ -12,6 +17,32 @@ app = FastAPI(
     description="Document intelligence and retrieval augmented generation platform."
 )
 
+BASE_DIR = Path(__file__).resolve().parent
+FRONTEND_DIR = BASE_DIR / "frontend"
+STATIC_DIR = FRONTEND_DIR / "static"
+
+app.mount(
+    "/static",
+    StaticFiles(directory=STATIC_DIR),
+    name="static"
+)
+
+@app.get("/")
+def serve_frontend():
+    return FileResponse(
+        FRONTEND_DIR / "index.html"
+    )
+
+@app.get("/health")
+def health_check():
+    logger.info("Health endpoint called.")
+
+    return {
+        "application": settings.APP_NAME,
+        "version": settings.APP_VERSION,
+        "status": "running"
+    }
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -19,15 +50,5 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-@app.get("/")
-def root():
-    logger.info("Root endpoint called.")
-
-    return {
-        "application": settings.APP_NAME,
-        "version": settings.APP_VERSION,
-        "status": "running"
-    }
 
 app.include_router(router)
