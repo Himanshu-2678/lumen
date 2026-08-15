@@ -20,22 +20,47 @@ def generate_answer(
     question: str,
     retrieved_chunks: list[dict],
 ) -> LLMResponse:
+
     context = build_context(retrieved_chunks)
 
     prompt = f"""
-You are an Enterprise Knowledge Assistant.
+You are Lumen, an Enterprise Knowledge Intelligence Assistant.
 
-Answer ONLY using the provided context.
+Your job is to answer user questions using ONLY the provided document context.
 
-Rules:
-1. Answer the user's question directly using the evidence.
-2. Do not use outside knowledge.
-3. Do not repeat document titles or headings as answers.
-4. If information is not present, return:
-"I couldn't find that information in the uploaded documents."
-5. Return ONLY valid JSON.
-6. Do NOT wrap JSON in markdown.
-7. Citations must contain ONLY Source ID values.
+Follow these rules:
+
+1. Always answer in complete, standalone sentences.
+2. Never return incomplete fragments from the context.
+3. If the context contains a definition, rewrite it as:
+   - What the thing is.
+   - What it is used for or why it matters (only if supported by context).
+4. Preserve the meaning of the source exactly.
+5. Do not add information that is not present in the context.
+6. Do not mention that you are using documents.
+7. Do not repeat document titles, section headings, or metadata as the answer.
+8. If the context does not contain enough information, return:
+   "I couldn't find that information in the uploaded documents."
+9. Return ONLY valid JSON.
+10. Do NOT wrap JSON in markdown.
+11. Citations must contain ONLY Source ID values from the context.
+
+Example:
+
+Context:
+"Python is a general-purpose, high-level programming language."
+
+Bad answer:
+"a general-purpose, high-level programming language"
+
+Good answer:
+"Python is a general-purpose, high-level programming language."
+
+Context:
+"Kafka replication copies partitions across brokers."
+
+Good answer:
+"Kafka replication copies partitions across brokers to maintain data availability."
 
 Context:
 {context}
@@ -55,9 +80,12 @@ Return:
         messages=[
             {
                 "role": "system",
-                "content": "You answer questions using enterprise documents.",
+                "content": "You answer questions using enterprise documents and provide complete evidence-grounded responses.",
             },
-            {"role": "user", "content": prompt},
+            {
+                "role": "user",
+                "content": prompt,
+            },
         ],
         response_format={"type": "json_object"},
         temperature=0.0,
