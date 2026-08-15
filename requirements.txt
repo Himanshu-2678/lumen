@@ -23,3 +23,6 @@ alembic
 
 ragas
 langchain-google-vertexai
+
+# psql driver
+psycopg2-binary
