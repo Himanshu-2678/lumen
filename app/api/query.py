@@ -38,6 +38,16 @@ def query_documents(request: QueryRequest):
 
     if not can_generate_answer(confidence):
 
+        confidence["signals"].update({
+            "supporting_chunks": 0,
+            "metadata_verified": False,
+            "citation_available": False,
+            "quote_verified": False
+        })
+
+        confidence["confidence_score"] = 0.0
+        confidence["confidence_level"] = "low"
+
         return {
             "question": request.question,
             "answer": "I couldn't find enough evidence in the uploaded documents to answer this question.",
