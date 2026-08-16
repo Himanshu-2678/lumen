@@ -32,24 +32,32 @@ def calculate_confidence(reranked_chunks: list[dict]):
         else 0.5
     )
 
-
     # Reranker quality
     top_score = top_chunk.get(
         "reranker_score",
         -999
     )
 
-
     if top_score < 0:
+        return {
+            "confidence_score": 0.0,
+            "confidence_level": "low",
+            "signals": {
+                "reason": "Retrieved chunks are not relevant enough",
+                "retrieval_agreement": False,
+                "retrieval_methods": [],
+                "supporting_chunks": 0,
+                "top_reranker_score": top_score,
+                "metadata_verified": False,
+                "citation_available": False,
+                "quote_verified": False,
+            },
+        }
 
-        reranker_quality_score = 0.0
-
-    else:
-
-        reranker_quality_score = min(
-            top_score / 10,
-            1
-        )
+    reranker_quality_score = min(
+        top_score / 10,
+        1
+    )
 
 
     # Evidence availability
