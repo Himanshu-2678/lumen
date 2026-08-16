@@ -18,6 +18,7 @@ const fileInput=document.getElementById("fileInput");
 const attachButton=document.getElementById("attachButton");
 const importButton=document.getElementById("importButton");
 const toast=document.getElementById("toast");
+const chipsContainer = document.getElementById("chips");
 let documents=[];
 
 function showToast(message,type="success"){
@@ -76,7 +77,7 @@ async function submitQuestion(){
         askInput.focus();
         return;
     }
-
+    document.getElementById("chips").style.display = "none";
     answerBox.hidden=false;
 
     answerText.innerHTML=`<span class="thinking">Searching knowledge base<span class="dots"></span></span>`;
@@ -117,11 +118,24 @@ async function submitQuestion(){
             renderEvidenceChecks(data.confidence.signals);
         }
 
-        if(data.sources&&data.sources.length){
-            const source=data.sources[0];
+        if(data.sources && data.sources.length){
 
-            evidenceSource.querySelector(".evidence__doc").textContent=source.filename;
-            evidenceSource.querySelector(".evidence__page").textContent=`Page ${source.page_number}`;
+            const source = data.sources[0];
+
+            evidenceSource.querySelector(".evidence__doc").textContent =
+                source.filename;
+
+            evidenceSource.querySelector(".evidence__page").textContent =
+                `Page ${source.page_number}`;
+
+        }
+        else{
+
+            evidenceSource.querySelector(".evidence__doc").textContent =
+                "No supporting document found";
+
+            evidenceSource.querySelector(".evidence__page").textContent =
+                "";
         }
     }
     catch(error){
@@ -160,7 +174,12 @@ chips.forEach(chip=>{
 
 function getStatusLabel(doc){
     if(doc.status==="processing"){
-        return "Processing document...";
+        return `
+            <span class="processing-status">
+                <span class="spinner"></span>
+                Processing document...
+            </span>
+        `;
     }
 
     if(doc.status==="indexed"){
@@ -281,34 +300,53 @@ function renderDocuments(){
 }
 
 async function uploadDocument(file){
-    const formData=new FormData();
-    formData.append("file",file);
-
-    showToast(`Uploading ${file.name}...`);
-
+    const tempId = "temp_" + Date.now();
+    // Immediately show in UI
+    documents.unshift({
+        id: tempId,
+        filename: file.name,
+        status: "uploading",
+        chunk_count: 0
+    });
+    renderDocuments();
+    const formData = new FormData();
+    formData.append(
+        "file",
+        file
+    );
     try{
-        const response=await fetch(`${API_URL}/documents/upload`,{
-            method:"POST",
-            body:formData
-        });
-
+        showToast(
+            `${file.name} uploading...`
+        );
+        const response = await fetch(
+            `${API_URL}/documents/upload`,
+            {
+                method:"POST",
+                body:formData
+            }
+        );
         if(!response.ok){
             throw new Error("Upload failed");
         }
-
-        const document=await response.json();
-
-        showToast(`${file.name} uploaded. Indexing started`);
-
+        const document = await response.json();
+        // Remove temporary item
+        documents = documents.filter(
+            doc => doc.id !== tempId
+        );
         await loadDocuments();
-
+        showToast(
+            `${file.name} indexing started`
+        );
         pollDocumentStatus(document.id);
     }
     catch(error){
         console.error(error);
-
+        documents = documents.filter(
+            doc => doc.id !== tempId
+        );
+        renderDocuments();
         showToast(
-            `Failed to upload ${file.name}`,
+            `${file.name} failed`,
             "error"
         );
     }
