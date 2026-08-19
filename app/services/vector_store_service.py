@@ -28,6 +28,7 @@ def add_chunks_to_vector_store(
 
         metadatas.append({
             "document_id": chunk["document_id"],
+            "workspace_id": chunk["workspace_id"],
             "filename": chunk["filename"],
             "page_number": chunk["page_number"],
             "chunk_index": chunk["chunk_index"],

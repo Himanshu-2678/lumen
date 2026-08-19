@@ -1,4 +1,4 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Request, Response
 from pydantic import BaseModel
 
 from app.services.hybrid_retrieval_service import hybrid_search
@@ -8,6 +8,7 @@ from app.schemas.query import QueryResponse
 from app.services.citation_service import build_citations
 from app.services.answer_guard_service import can_generate_answer
 from app.services.reranker_service import rerank_chunks
+from app.core.workspace import get_workspace_id
 
 router = APIRouter(prefix="/query", tags=["Query"])
 
@@ -17,10 +18,11 @@ class QueryRequest(BaseModel):
 
 
 @router.post("/", response_model=QueryResponse)
-def query_documents(request: QueryRequest):
+def query_documents(request: QueryRequest, http_request: Request, response: Response):
 
     retrieved_chunks = hybrid_search(
-        query=request.question
+        query=request.question,
+        workspace_id=get_workspace_id(http_request, response),
     )
 
 

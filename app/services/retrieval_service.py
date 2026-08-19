@@ -12,6 +12,7 @@ def vector_search(
     top_k: int = 20,
     document_id: int | None = None,
     filename: str | None = None,
+    workspace_id: str | None = None,
 ):
     where = None
 
@@ -19,6 +20,9 @@ def vector_search(
         where = {"document_id": document_id}
     elif filename is not None:
         where = {"filename": filename}
+
+    if workspace_id is not None:
+        where = {"workspace_id": workspace_id}
 
     return collection.query(
         query_embeddings=[query_embedding],
@@ -31,6 +35,7 @@ def retrieve_chunks(
     top_k: int = 20,
     document_id: int | None = None,
     filename: str | None = None,
+    workspace_id: str | None = None,
 ):
     query_embedding = generate_query_embedding(query)
 
@@ -39,6 +44,7 @@ def retrieve_chunks(
         top_k=top_k,
         document_id=document_id,
         filename=filename,
+        workspace_id=workspace_id,
     )
 
     if not results["ids"] or not results["ids"][0]:

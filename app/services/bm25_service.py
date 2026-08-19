@@ -6,12 +6,16 @@ from app.models.chunk import Chunk
 def bm25_search(
     db: Session,
     query: str,
+    workspace_id: str | None = None,
     top_k: int = 20,
 ):
     if not query.strip():
         return []
 
-    chunks = db.query(Chunk).all()
+    query_builder = db.query(Chunk)
+    if workspace_id is not None:
+        query_builder = query_builder.filter(Chunk.workspace_id == workspace_id)
+    chunks = query_builder.all()
 
     if not chunks:
         return []
@@ -36,6 +40,7 @@ def bm25_search(
             "text": chunk.text,
             "metadata": {
                 "document_id": chunk.document_id,
+                "workspace_id": chunk.workspace_id,
                 "filename": chunk.filename,
                 "page_number": chunk.page_number,
                 "chunk_index": chunk.chunk_index,

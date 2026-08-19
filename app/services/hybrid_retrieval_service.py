@@ -10,14 +10,24 @@ def hybrid_search(
     vector_top_k: int = 20,
     bm25_top_k: int = 20,
     final_top_k: int = 5,
+    workspace_id: str | None = None,
 ):
     # Semantic Retrieval
-    vector_results = retrieve_chunks(query=query, top_k=vector_top_k)
+    vector_results = retrieve_chunks(
+        query=query,
+        top_k=vector_top_k,
+        workspace_id=workspace_id,
+    )
 
     # Keyword Retrieval
     db = SessionLocal()
     try:
-        bm25_results = bm25_search(db=db, query=query, top_k=bm25_top_k)
+        bm25_results = bm25_search(
+            db=db,
+            query=query,
+            workspace_id=workspace_id,
+            top_k=bm25_top_k,
+        )
     finally:
         db.close()
 
