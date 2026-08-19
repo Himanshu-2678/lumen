@@ -89,9 +89,35 @@ Return:
                 "content": prompt,
             },
         ],
-        response_format={"type": "json_object"},
+        response_format={
+            "type": "json_schema",
+            "json_schema": {
+                "name": "llm_response",
+                "strict": True,
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "answer": {
+                            "type": "string"
+                        },
+                        "citations": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "required": [
+                        "answer",
+                        "citations"
+                    ],
+                    "additionalProperties": False
+                }
+            }
+        },
         temperature=0.0,
-        max_completion_tokens=512,
+        reasoning_effort="low",
+        max_completion_tokens=1024,
     )
 
     return LLMResponse.model_validate_json(

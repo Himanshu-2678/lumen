@@ -26,4 +26,4 @@ class QueryResponse(BaseModel):
 
 class LLMResponse(BaseModel):
     answer: str
-    citations: list[str]
+    citations: list[str] = Field(default_factory=list)
