@@ -1,4 +1,4 @@
-const API_URL="http://127.0.0.1:8000";
+const API_URL=window.location.origin;
 const askInput=document.getElementById("askInput");
 const askSend=document.getElementById("askSend");
 const evidenceChecks=document.getElementById("evidenceChecks");
@@ -15,6 +15,7 @@ const kbBackdrop=document.getElementById("kbBackdrop");
 const docList=document.getElementById("docList");
 const dropzone=document.getElementById("dropzone");
 const fileInput=document.getElementById("fileInput");
+const folderInput=document.getElementById("folderInput");
 const attachButton=document.getElementById("attachButton");
 const importButton=document.getElementById("importButton");
 const toast=document.getElementById("toast");
@@ -338,6 +339,7 @@ async function uploadDocument(file){
             `${file.name} indexing started`
         );
         pollDocumentStatus(document.id);
+        return true;
     }
     catch(error){
         console.error(error);
@@ -347,6 +349,40 @@ async function uploadDocument(file){
         renderDocuments();
         showToast(
             `${file.name} failed`,
+            "error"
+        );
+        return false;
+    }
+}
+
+async function uploadFolder(files){
+    const pdfFiles=Array.from(files).filter(
+        file => file.name.toLowerCase().endsWith(".pdf")
+    );
+
+    if(!pdfFiles.length){
+        showToast("No PDF files found in that folder", "error");
+        return;
+    }
+
+    showToast(`Importing ${pdfFiles.length} PDF${pdfFiles.length === 1 ? "" : "s"}...`);
+
+    let uploadedCount=0;
+
+    for(const file of pdfFiles){
+        if(await uploadDocument(file)){
+            uploadedCount++;
+        }
+    }
+
+    if(uploadedCount === pdfFiles.length){
+        showToast(
+            `${uploadedCount} PDF${uploadedCount === 1 ? "" : "s"} imported successfully`
+        );
+    }
+    else{
+        showToast(
+            `${uploadedCount} of ${pdfFiles.length} PDFs imported`,
             "error"
         );
     }
@@ -370,6 +406,11 @@ docList.addEventListener("click",async event=>{
 fileInput.addEventListener("change",()=>{
     Array.from(fileInput.files).forEach(uploadDocument);
     fileInput.value="";
+});
+
+folderInput.addEventListener("change",()=>{
+    uploadFolder(folderInput.files);
+    folderInput.value="";
 });
 
 function openModal(){
@@ -409,7 +450,9 @@ if(attachButton){
 }
 
 if(importButton){
-    importButton.addEventListener("click",openModal);
+    importButton.addEventListener("click",()=>{
+        folderInput.click();
+    });
 }
 
 loadDocuments();
