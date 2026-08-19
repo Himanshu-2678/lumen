@@ -14,6 +14,7 @@ def ingest_document(
     document_id: int,
     filename: str,
     file_path: str,
+    workspace_id: str,
 ):
     """
     Complete document ingestion pipeline.
@@ -38,6 +39,7 @@ def ingest_document(
         chunks=chunks,
         document_id=document_id,
         filename=filename,
+        workspace_id=workspace_id,
     )
 
     save_chunks(db=db, chunks=chunks)

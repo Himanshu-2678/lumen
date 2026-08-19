@@ -4,12 +4,13 @@ from app.models.chunk import Chunk
 from app.vectorstore.chroma_client import collection
 import os
 
-def create_document(db: Session, filename: str, file_type: str, file_path: str, document_hash: str, status: str = "processing") -> Document:
+def create_document(db: Session, filename: str, file_type: str, file_path: str, document_hash: str, workspace_id: str, status: str = "processing") -> Document:
     document = Document(
         filename=filename,
         file_type=file_type,
         file_path=file_path,
         document_hash=document_hash,
+        workspace_id=workspace_id,
         status=status
     )
     db.add(document)
@@ -17,8 +18,11 @@ def create_document(db: Session, filename: str, file_type: str, file_path: str, 
     db.refresh(document)
     return document
 
-def get_document_by_hash(db: Session, document_hash: str):
-    return db.query(Document).filter(Document.document_hash == document_hash).first()
+def get_document_by_hash(db: Session, document_hash: str, workspace_id: str):
+    return db.query(Document).filter(
+        Document.document_hash == document_hash,
+        Document.workspace_id == workspace_id,
+    ).first()
 
 def update_document_status(db: Session, document_id: int, status: str, chunk_count: int):
     document = db.query(Document).filter(Document.id == document_id).first()
@@ -29,14 +33,20 @@ def update_document_status(db: Session, document_id: int, status: str, chunk_cou
         db.refresh(document)
     return document
 
-def get_documents(db: Session):
-    return db.query(Document).all()
+def get_documents(db: Session, workspace_id: str):
+    return db.query(Document).filter(Document.workspace_id == workspace_id).all()
 
-def get_document(db: Session, document_id: int):
-    return db.query(Document).filter(Document.id == document_id).first()
+def get_document(db: Session, document_id: int, workspace_id: str):
+    return db.query(Document).filter(
+        Document.id == document_id,
+        Document.workspace_id == workspace_id,
+    ).first()
 
-def delete_document(db: Session, document_id: int):
-    document = db.query(Document).filter(Document.id == document_id).first()
+def delete_document(db: Session, document_id: int, workspace_id: str):
+    document = db.query(Document).filter(
+        Document.id == document_id,
+        Document.workspace_id == workspace_id,
+    ).first()
     if not document:
         return None
 
