@@ -2,18 +2,6 @@
 
 Lumen is a document intelligence platform that turns uploaded PDFs into an evidence-grounded question-answering system. It combines hybrid retrieval, cross-encoder reranking, confidence gating, and structured LLM responses so answers are tied to the user's uploaded documents rather than unsupported general knowledge.
 
-## Highlights
-
-- Upload individual PDFs or import a folder of PDFs from the web interface.
-- Parse PDF text with page-level metadata.
-- Persist document metadata and extracted chunks in PostgreSQL-compatible Neon.
-- Persist embeddings and searchable vector metadata in ChromaDB.
-- Combine semantic vector retrieval with BM25 keyword retrieval.
-- Rerank candidate evidence with `cross-encoder/ms-marco-MiniLM-L-6-v2`.
-- Refuse to answer when evidence confidence is below the configured threshold.
-- Generate strict JSON responses with answer text and source IDs through Groq.
-- Display source filenames and page numbers with each answer.
-- Isolate documents by anonymous browser workspace to prevent cross-user knowledge-base leakage.
 
 ## Architecture
 
@@ -26,6 +14,21 @@ Lumen is a document intelligence platform that turns uploaded PDFs into an evide
 ![Lumen screenshot 1](assets/ss/ss1.png)
 
 ![Lumen screenshot 2](assets/ss/ss2.png)
+
+
+## System Workflow
+
+- Upload individual PDFs or import a folder of PDFs from the web interface.
+- Parse PDF text with page-level metadata.
+- Persist document metadata and extracted chunks in PostgreSQL-compatible Neon.
+- Persist embeddings and searchable vector metadata in ChromaDB.
+- Combine semantic vector retrieval with BM25 keyword retrieval.
+- Rerank candidate evidence with `cross-encoder/ms-marco-MiniLM-L-6-v2`.
+- Refuse to answer when evidence confidence is below the configured threshold.
+- Generate strict JSON responses with answer text and source IDs through Groq.
+- Display source filenames and page numbers with each answer.
+- Isolate documents by anonymous browser workspace to prevent cross-user knowledge-base leakage.
+
 
 ## System Components
 
