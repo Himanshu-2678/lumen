@@ -1,7 +1,7 @@
 from datetime import datetime
 from typing import TYPE_CHECKING
 
-from sqlalchemy import String, Integer, DateTime
+from sqlalchemy import String, Integer, DateTime, UniqueConstraint
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.db.base import Base
@@ -11,13 +11,17 @@ if TYPE_CHECKING:
     
 class Document(Base):
     __tablename__ = "documents"
+    __table_args__ = (
+        UniqueConstraint("workspace_id", "document_hash", name="uq_documents_workspace_hash"),
+    )
 
     id: Mapped[int] = mapped_column(primary_key=True)
     filename: Mapped[str] = mapped_column(String(255))
     file_type: Mapped[str] = mapped_column(String(50))
     file_path: Mapped[str] = mapped_column(String(500))
     status: Mapped[str] = mapped_column(String(50), default="uploaded")
-    document_hash: Mapped[str] = mapped_column(String(64), unique=True, nullable=False)
+    document_hash: Mapped[str] = mapped_column(String(64), nullable=False)
+    workspace_id: Mapped[str] = mapped_column(String(36), nullable=False)
     chunk_count: Mapped[int] = mapped_column(Integer, default=0)
     error_message: Mapped[str | None] = mapped_column(String(500), nullable=True)
 

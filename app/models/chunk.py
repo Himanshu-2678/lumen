@@ -18,6 +18,8 @@ class Chunk(Base):
         ForeignKey("documents.id")
     )
 
+    workspace_id: Mapped[str] = mapped_column(String(36), nullable=False)
+
     chunk_index: Mapped[int]
 
     page_number: Mapped[int]
